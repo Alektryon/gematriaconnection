@@ -1342,7 +1342,7 @@ function Add_AllCiphers(impBool = false) {
 	for (x = 0; x < allCiphers.length; x++) {
 		q = 0
 		cN = allCiphers[x].Nickname
-		if (openCiphers.indexOf(cN) == -1 && cN.indexOf("Hebrew") == -1 && cN.indexOf("Greek") == -1 && cN.indexOf("Latin") == -1 && cN.indexOf("Arabic") == -1 && cN.indexOf("Polish") == -1) ) {
+		if (openCiphers.indexOf(cN) == -1 && cN.indexOf("Hebrew") == -1 && cN.indexOf("Greek") == -1 && cN.indexOf("Latin") == -1 && cN.indexOf("Arabic") == -1 && cN.indexOf("Polish") == -1) {
 			for (z = 0; z < allCiphers.length; z++) {
 				if (allCiphers[z].Nickname == cN) {
 					openCiphers.splice(q, 0, cN)
