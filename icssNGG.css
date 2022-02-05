@@ -1,0 +1,337 @@
+body {
+	background-color: RGB(34, 34, 34);
+	font-family: "Bookman Old Style", Arial;
+	color: white;
+}
+
+#MenuSpot {
+	display: inline;
+}
+#MainTable {
+	display: inline;
+}
+.MenuLink {
+	padding-top: 10px;
+	padding-bottom: 2px;
+	display: inline;
+	font-size: 108%;
+	font-weight: bold;
+}
+.MenuLink a:link {color: RGB(140, 250, 243)}
+.MenuLink a:visited {color: RGB(140, 250, 243)}
+.MenuLink a:hover {color: RGB(255, 255, 255)}
+.MenuLink a:active {color: RGB(255, 255, 0)}
+
+#Gematria_Table {
+	padding-top: 5px;
+}
+
+#GemTable {
+	background-color: RGB(16, 16, 16);
+	border: 1px solid;
+	border-color: RGB(77, 77, 77);
+	padding: 5px;
+}
+#GemTable td {
+	min-width: 125px;
+	max-width: 125px;
+	text-align: center;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+#GemTable2 {
+	background-color: RGB(16, 16, 16);
+	border: 1px solid;
+	border-color: RGB(77, 77, 77);
+	padding: 5px;
+}
+#GemTable2 td {
+	min-width: 50px;
+	max-width: 125px;
+	text-align: center;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.GemHead a {
+	color: inherit !important;
+	text-decoration: inherit !important;
+}
+.GemHead {padding-top: 8px; vertical-align: bottom;}
+.GemHead:hover {
+	text-decoration: underline;
+}
+
+.GemVal {
+	font-size: 200%;
+	font-weight: 500;
+}
+
+.GemVal a {
+	color: inherit !important;
+	text-decoration: inherit !important;
+}
+
+.GemVal2 {
+	font-size: 200%;
+	font-weight: 500;
+	padding: 12px;
+}
+.GemVal2 a {
+	color: inherit !important;
+	text-decoration: inherit !important;
+}
+
+#MatchButton {
+	font-size: 90%;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	color: RGB(45, 255, 45);
+	background-color: RGB(0, 0, 4);
+}
+.CipherButton {
+	font-size: 75%;
+	color: RGB(0, 200, 255);
+	width: 100px;
+	background-color: RGB(0, 0, 4);
+	font-weight: normal;
+}
+#ChartTable {
+	border-collapse: collapse;
+}
+#ChartTable td {
+	text-align: center;
+	border: 1px solid;
+	background: RGB(21,21,21);
+	border-color: RGB(66, 66, 66);
+	padding-right: 8px;
+	padding-left: 8px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	min-width: 12px;
+}
+#ChartTableThin {
+	border-collapse: collapse;
+}
+#ChartTableThin td {
+	text-align: center;
+	border: 1px solid;
+	background: RGB(21,21,21);
+	border-color: RGB(66, 66, 66);
+	padding-right: 4px;
+	padding-left: 4px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	min-width: 10px;
+}
+.ChartChar {
+	color: RGB(242, 153, 96);
+	font-size: 140%;
+}
+.ChartVal {
+	font-size: 120%;
+	font-weight: 300;
+}
+#BreakdownSpot {
+	min-height: 50px;
+	width: 800px;
+	text-align: left;
+	padding-top: 15px;
+}
+
+.BreakTable {
+	border-collapse: collapse;
+}
+.BreakTable td {
+	text-align: center;
+	border: 1px solid;
+	border-color: RGB(20, 20, 20);
+	min-width: 20px;
+}
+.BreakChar {
+	text-align: center;
+	font-size: 105%;
+	color: RGB(211, 237, 255);
+	background: RGB(30,30,30);
+	padding-right: 2px;
+	padding-left: 2px;
+}
+.BreakWordSum {
+	font-size: 115%;
+	background: RGB(25,25,25);
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.BreakPhraseSum {
+	font-weight: bold;
+	background: RGB(21,21,21);
+	font-size: 175%;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.BreakVal {
+	color: RGB(211, 211, 211);
+	background: RGB(25,25,25);
+	font-size: 95%;
+	padding-right: 2px;
+	padding-left: 2px;
+}
+
+.breakPhrase {
+	display: inline;
+	font-size: 130%;
+	color: RGB(240, 240, 240);
+	font-weight: 400;
+}
+.breakSum {
+	display: inline;
+	font-size: 150%;
+	color: RGB(255, 255, 255);
+	font-weight: 900;
+}
+.breakCipher {
+	display: inline;
+	font-size: 110%;
+	font-weight: 100;
+}
+#SimpleBreak {
+	padding-bottom: 6px;
+}
+.LetterCounts {
+	padding-bottom: 10px;
+	color: RGB(244, 244, 196);
+	font-size: 90%;
+}
+
+.HistoryTable {
+	text-align: center;
+	border: 1px solid RGB(151, 151, 151);
+}
+.HistoryTable td {padding-right: 3px; padding-left: 4px;}
+.HistoryTable tr:nth-child(even) {
+	background-color: RGB(25, 25, 25);
+}
+.HistoryTable tr:nth-child(odd) {
+	background-color: RGB(19, 19, 19);
+}
+.historyPhrase {
+	text-align: right;
+}
+.historyHead {
+	min-width: 80px;
+	max-width: 80px;
+	font-size: 85%;
+	padding: 5px;
+	text-align: center;
+}
+
+.MTable {
+	border: 1px solid gray;
+	padding: 2px;
+	text-align: center;
+	table-layout: fixed;
+}
+.CipherHead {
+	min-width: 125px;
+	max-width: 125px;
+	font-size: 85%;
+	padding: 5px;
+	vertical-align: bottom;
+}
+.MTable tr:nth-child(even) {
+	background-color: RGB(25, 25, 25);
+}
+.MTable tr:nth-child(odd) {
+	background-color: RGB(19, 19, 19);
+}
+.MPhrase {
+	padding: 3px;
+	padding-right: 8px;
+	max-width: 300px;
+	text-align: right;
+}
+.MSum {
+	font-size: 90%;
+	padding: 5px;
+}
+.MSumFull {
+	font-size: 136%;
+	font-weight: bold;
+}
+.MSumPart {
+	font-size: 115%;
+	font-weight: bold;
+}
+
+.ClassicEQ {
+	display: inline;
+	color: RGB(223, 223, 223);
+	font-size: 90%;
+}
+
+#OptionsTable {
+	border: 1px solid RGB(147, 147, 147);
+}
+
+#OptionsTable td {
+	text-align: right;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 4px;
+	padding-top: 4px;
+}
+
+#CipherChart {
+	min-width: 500px;
+}
+#CipherChart td {
+	text-align: left;
+	vertical-align: top;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border: 1px solid RGB(147, 147, 147);
+}
+#CipherChart a:link {color: RGB(95, 235, 255)}
+#CipherChart a:visited {color: RGB(95, 235, 255)}
+#CipherChart a:hover {color: RGB(131, 255, 255)}
+#CipherChart a:active {color: RGB(255, 255, 0)}
+
+.CategoryList {
+	width: 150px;
+	font-size: 110%;
+}
+.CategoryList2 {
+	font-size: 110%;
+}
+
+.BottomDweller {
+	float: top;
+	float: right;
+	font-weight: bold;
+}
+#SaveOptions {
+	display: inline;
+	font-size: 75%;
+	color: RGB(255, 255, 148);
+	width: 115px;
+	background-color: RGB(0, 0, 8);
+	float: left;
+}
+#SaveMsg {
+	display: inline;
+	font-size: 75%;
+	color: RGB(255, 255, 148);
+	float: left;
+}
+.CipherButton {
+	display: inline-block;
+	font-size: 75%;
+	color: RGB(255, 255, 148);
+	width: 115px;
+	background-color: RGB(0, 0, 8);
+}
+.ButtonSection {float: right;}

@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<Title>The Web's Best Gematria Calculator - Gematrinator.com</Title>
+
+<script src="gematriaNGG.js"></script>
+<script src="ijavaNGG.js"></script>
+
+<center>
+<?php
+	$html1 = file_get_contents('http://www.gematrinator.com/Partials/LogoTable.html');
+	echo $html1;
+?>
+</center>
+
+</HEAD>
+
+<link rel="stylesheet" type="text/css" href="icssNGG.css">
+
+<BODY onload="Page_Launch()">
+
+<P>
+<center>
+
+<div id="MenuSpot"></div><BR>
+
+<div id="MainTable"><table><tr>
+	<td><center>
+		<h3>Enter Word, Phrase, or Number(s):</h3>
+	</center></td>
+
+	</tr><tr>
+
+	<td><center><input id="SearchField" autofocus type="text" oninput="FieldChange(sVal())" style="width: 500px; font-size: 125%" onkeydown="navHistory(event.keyCode);"></input>
+	<button id="MatchButton" onclick="Get_Matches()" value="Match" style="font-size: 110%"><B>Match</B></button><P>
+	</center><P>
+
+	<div id="Gematria_Table"></div>
+	<div id="BreakdownSpot"></div>
+
+	</td>
+</tr></table></div>
+
+	<P>
+	<center><div id="ChartSpot" style="min-height: 182px;"></div></center><P>
+	<div id="MiscSpot"></div>
+
+	<P>&nbsp;</P>
+
+	<div id="PageFooter" style="background-color: RGB(0, 0, 16);">
+		<?php
+			$html4 = file_get_contents('http://www.gematrinator.com/Partials/PageFooter.html');
+			echo $html4;
+		?>
+	</div>
+
+</center>
+</BODY>
+</HTML>
