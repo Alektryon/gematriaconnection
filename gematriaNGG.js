@@ -404,7 +404,7 @@ class cipher {
 				this.vArr2 = [9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,,28,29,30,31,32,33,34]
 				break;
                 
-                case "English Ordinal Starting at 10":
+                case "Alphanumeric Qabbala":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
 					this.cArr2[y] = (y + 65)
@@ -1103,7 +1103,7 @@ function Build_Ciphers() {
             case "English Ordinal Starting at 7": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 7", 121,22,124); break;    
             case "English Ordinal Starting at 8": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 8", 121,22,124); break;   
             case "English Ordinal Starting at 9": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 9", 121,22,124); break;
-            case "English Ordinal Starting at 10": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 10", 121,22,124); break;   
+            case "Alphanumeric Qabbala": allCiphers[allCiphers.length] = new cipher(key, "Alphanumeric Qabbala", 191,195,127); break;   
             
                 
                 
@@ -1248,7 +1248,7 @@ function Set_Categories() {
     cipherArray["English Ordinal Starting at 7"] = "English Ordinal Custom"
     cipherArray["English Ordinal Starting at 8"] = "English Ordinal Custom"
     cipherArray["English Ordinal Starting at 9"] = "English Ordinal Custom"
-    cipherArray["English Ordinal Starting at 10"] = "English Ordinal Custom"
+    cipherArray["Alphanumeric Qabbala"] = "English Ordinal Custom"
     
     cipherArray["Archaic Latin"] = "Latin"
     cipherArray["Old Italic Latin"] = "Latin"
@@ -1342,7 +1342,7 @@ function Add_AllCiphers(impBool = false) {
 	for (x = 0; x < allCiphers.length; x++) {
 		q = 0
 		cN = allCiphers[x].Nickname
-		if (openCiphers.indexOf(cN) == -1 && cN.indexOf("Hebrew") == -1 && cN.indexOf("Greek") == -1) {
+		if (openCiphers.indexOf(cN) == -1 && cN.indexOf("Hebrew") == -1 && cN.indexOf("Greek") == -1 && cN.indexOf("Latin") == -1 && cN.indexOf("Arabic") == -1 && cN.indexOf("Polish") == -1) ) {
 			for (z = 0; z < allCiphers.length; z++) {
 				if (allCiphers[z].Nickname == cN) {
 					openCiphers.splice(q, 0, cN)
