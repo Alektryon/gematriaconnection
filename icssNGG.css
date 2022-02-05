@@ -331,7 +331,7 @@ body {
 	display: inline-block;
 	font-size: 75%;
 	color: RGB(255, 255, 148);
-	width: 115px;
+	width: 100px;
 	background-color: RGB(0, 0, 8);
 }
 .ButtonSection {float: right;}
