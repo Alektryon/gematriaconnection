@@ -440,7 +440,7 @@ class cipher {
 				this.vArr2 = [9,18,27,36,45,54,63,72,81,90,99,108,117,126,135,144,153,162,171,180,189,198,207,216,225,234]
 				break;
 				
-					case "Elizabethan Simple":
+			case "Elizabethan Simple":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
 					this.cArr2[y] = (y + 65)
@@ -449,7 +449,7 @@ class cipher {
 				this.vArr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 10, 11, 12, 13,14,15,16, 17, 18, 19, 20, 20, 21, 22, 23, 24]
 				break;
 
-					case "Elizabethan Reverse":
+			case "Elizabethan Reverse":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
 					this.cArr2[y] = (y + 65)
@@ -457,9 +457,8 @@ class cipher {
 				this.vArr = [24,23,22,21,20,19,18,17,16,16,15,14,13,12,11,10,9,8,7,6,5,5,4,3,2,1]
 				this.vArr2 = [24,23,22,21,20,19,18,17,16,16,15,14,13,12,11,10,9,8,7,6,5,5,4,3,2,1]
 				break;
-
 				
-					case "Elizabethan Short":
+			case "Elizabethan Short":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
 					this.cArr2[y] = (y + 65)
@@ -468,13 +467,31 @@ class cipher {
 				this.vArr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 1, 2, 3, 4,5,6,7, 8, 9, 1, 2, 2, 3, 4, 5, 6]
 				break;
 				
-				case "Elizabethan Kaye":
+			case "Elizabethan Short Rev":
+				for (y = 0; y < 26; y++) {
+					this.cArr[y] = (y + 97)
+					this.cArr2[y] = (y + 65)
+				}
+				this.vArr = [6,5,4,3,2,1,9,8,7,7,6,5,4,3,2,1,9,8,7,6,5,5,4,3,2,1]
+				this.vArr2 = [6,5,4,3,2,1,9,8,7,7,6,5,4,3,2,1,9,8,7,6,5,5,4,3,2,1]
+				break;
+				
+			case "Elizabethan Kaye":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
 					this.cArr2[y] = (y + 65)
 				}
 				this.vArr = [27,28,29,30,31,32,33,34,35,35,10,11,12,13,14,15,16,17,18,19,20,20,21,22,23,24]
 				this.vArr2 = [27,28,29,30,31,32,33,34,35,35,10,11,12,13,14,15,16,17,18,19,20,20,21,22,23,24]
+				break;
+				
+			case "Modern Kaye":
+				for (y = 0; y < 26; y++) {
+					this.cArr[y] = (y + 97)
+					this.cArr2[y] = (y + 65)
+				}
+				this.vArr = [27,28,29,30,31,32,33,34,35,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+				this.vArr2 = [27,28,29,30,31,32,33,34,35,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
 				break;
 				
                 
@@ -1174,12 +1191,12 @@ function Build_Ciphers() {
                 
 				// Elizabethan Ciphers
 			case "Elizabethan Simple": allCiphers[allCiphers.length] = new cipher(key, "Elizabethan Simple", 80, 235, 21); break;
-				
 			case "Elizabethan Reverse": allCiphers[allCiphers.length] = new cipher(key, "Elizabethan Reverse", 0, 186, 0); break;
-				
 			case "Elizabethan Short": allCiphers[allCiphers.length] = new cipher(key, "Elizabethan Short", 100, 216, 209); break;
-				
+			case "Elizabethan Short Rev": allCiphers[allCiphers.length] = new cipher(key, "Elizabethan Short Rev", 88, 125, 254); break;
 			case "Elizabethan Kaye": allCiphers[allCiphers.length] = new cipher(key, "Elizabethan Kaye", 220, 93, 73); break;
+			case "Modern Kaye": allCiphers[allCiphers.length] = new cipher(key, "Modern Kaye", 230, 153, 163); break;
+
 		}
 	}
 
@@ -1312,8 +1329,9 @@ function Set_Categories() {
 	cipherArray["Elizabethan Simple"] = "Elizabethan"
 	cipherArray["Elizabethan Reverse"] = "Elizabethan"
 	cipherArray["Elizabethan Short"] = "Elizabethan"
+	cipherArray["Elizabethan Short Rev"] = "Elizabethan"
 	cipherArray["Elizabethan Kaye"] = "Elizabethan"
-	
+	cipherArray["Modern Kaye"] = "Elizabethan"
 	
 }
 
