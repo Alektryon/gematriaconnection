@@ -432,6 +432,9 @@ function ToggleCipher(impVal) {
 		case "s;cha":
 			cName = "Chaldean";
 			break;
+		case "s;aq":
+			cName = "Alphanumeric Qabbala";
+			break;
 		case "s;all":
 			Add_AllCiphers();
 			RestoreField();
@@ -793,9 +796,10 @@ function Open_Ciphers(impOpt = cOption, impBool = false) {
 		}
 	}
 
-	hStr += '<div class="ButtonSection"><button class="CipherButton" onclick="Add_BaseCiphers(true)" value="BaseCiphers"><B>Base Ciphers</B></button>'
-	hStr += '<button class="CipherButton" onclick="Add_AllCiphers(true)" value="AllCiphers"><B>All Ciphers</B></button><BR>'
-	hStr += '</td></tr></table></center>'
+	hStr += '<div class="ButtonSection"><button class="CipherButton" onclick="No_Ciphers(true)" value="NoCiphers"><B>Empty</B></button>'
+	hStr += '<button class="CipherButton" onclick="Add_BaseCiphers(true)" value="BaseCiphers"><B>Base Ciphers</B></button>'
+	hStr += '<button class="CipherButton" onclick="Add_AllCiphers(true)" value="AllCiphers"><B>All Ciphers</B></button>'
+	hStr += '<BR></td></tr></table></center>'
 
 	mSpot.innerHTML = ""
 	mSpot.innerHTML = hStr
