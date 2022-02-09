@@ -1407,6 +1407,13 @@ function Add_BaseCiphers(impBool = false) {
 		Populate_MenuBar()
 	}
 }
+function No_Ciphers() {
+    openCiphers = []
+    Build_Open_Ciphers()
+    Open_Ciphers()
+    document.getElementById("Gematria_Table").innerHTML = "" // empty cipher table
+    Open_History() // update table
+}
 function FindSpot(impName) {
 	for (x = 0; x < allCiphers.length; x++) {
 		if (allCiphers[x].Nickname == impName) {
