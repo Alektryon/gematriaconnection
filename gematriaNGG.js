@@ -413,6 +413,42 @@ class cipher {
 				this.vArr2 = [10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35]
 				break;
                 
+                case "Master":
+				for (y = 0; y < 26; y++) {
+					this.cArr[y] = (y + 97)
+					this.cArr2[y] = (y + 65)
+				}
+				this.vArr = [11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36]
+				this.vArr2 = [11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36]
+				break;
+                
+                case "Master Builder":
+				for (y = 0; y < 26; y++) {
+					this.cArr[y] = (y + 97)
+					this.cArr2[y] = (y + 65)
+				}
+				this.vArr = [22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47]
+				this.vArr2 = [22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47]
+				break;
+                
+                case "Masonic":
+				for (y = 0; y < 26; y++) {
+					this.cArr[y] = (y + 97)
+					this.cArr2[y] = (y + 65)
+				}
+				this.vArr = [33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58]
+				this.vArr2 = [33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58]
+				break;
+                
+                case "Foundation":
+				for (y = 0; y < 26; y++) {
+					this.cArr[y] = (y + 97)
+					this.cArr2[y] = (y + 65)
+				}
+				this.vArr = [44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69]
+				this.vArr2 = [44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69]
+				break;
+                
                 case "Archaic Latin":
 				for (y = 0; y < 21; y++) {
 				this.cArr = [97,98,99,100,101,102,122,104,105,107,108,109,110,111,112,113,114,115,116,118,120]
@@ -1131,7 +1167,10 @@ function Build_Ciphers() {
             case "English Ordinal Starting at 8": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 8", 121,22,124); break;   
             case "English Ordinal Starting at 9": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 9", 121,22,124); break;
             case "Alphanumeric Qabbala": allCiphers[allCiphers.length] = new cipher(key, "Alphanumeric Qabbala", 191,195,127); break;   
-            
+            case "Master": allCiphers[allCiphers.length] = new cipher(key, "Master", 77,129,200); break;   
+            case "Master Builder": allCiphers[allCiphers.length] = new cipher(key, "Master Builder", 77,172,148); break;   
+            case "Masonic": allCiphers[allCiphers.length] = new cipher(key, "Masonic", 206,56,55); break;   
+            case "Foundation": allCiphers[allCiphers.length] = new cipher(key, "Foundation", 207,80,155); break;   
                 
                 
 		
@@ -1276,6 +1315,10 @@ function Set_Categories() {
     cipherArray["English Ordinal Starting at 8"] = "English Ordinal Custom"
     cipherArray["English Ordinal Starting at 9"] = "English Ordinal Custom"
     cipherArray["Alphanumeric Qabbala"] = "English Ordinal Custom"
+    cipherArray["Master"] = "English Ordinal Custom"
+    cipherArray["Master Builder"] = "English Ordinal Custom"
+    cipherArray["Masonic"] = "English Ordinal Custom"
+    cipherArray["Foundation"] = "English Ordinal Custom"
     
     cipherArray["Archaic Latin"] = "Latin"
     cipherArray["Old Italic Latin"] = "Latin"
