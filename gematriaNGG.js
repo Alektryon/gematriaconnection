@@ -458,12 +458,12 @@ class cipher {
                 }
 				break;
                 
-                case "Old Italic Latin":
+                case "Etruscan":
 				for (y = 0; y < 27; y++) {
-				this.cArr = [97,98,99,100,101,118,122,104,952,105,107,108,109,110,958,111,112,347,113,114,115,116,121,120,966,968,102]
-				this.cArr2 = [65,66,67,68,69,86,90,72,920,73,75,76,77,78,926,79,80,346,81,82,83,84,89,88,934,936,70]
-				this.vArr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27]
-				this.vArr2 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27]
+				this.cArr = [97,98,99,100,101,118,122,104,952,105,107,108,109,110,958,111,112,347,113,114,115,116,117,120,966,968,102]
+				this.cArr2 = [65,66,67,68,69,86,90,72,920,73,75,76,77,78,926,79,80,346,81,82,83,84,85,88,934,936,70]
+				this.vArr = [1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100,200,300,400,500,600,700,800,900]
+				this.vArr2 = [1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100,200,300,400,500,600,700,800,900]
                 }
 				break;
                 
@@ -1224,7 +1224,7 @@ function Build_Ciphers() {
 			case "Greek Isopsephy": allCiphers[allCiphers.length] = new cipher(key, "Greek", 139, 200, 163, "Extend"); break;
                 
             case "Archaic Latin": allCiphers[allCiphers.length] = new cipher(key, "Archaic Latin", 166, 66, 99,); break;
-            case "Old Italic Latin": allCiphers[allCiphers.length] = new cipher(key, "Old Italic Latin", 255, 99, 66,); break;
+            case "Etruscan": allCiphers[allCiphers.length] = new cipher(key, "Etruscan", 255, 99, 66,); break;
                 
             case "Novem Maximus": allCiphers[allCiphers.length] = new cipher(key, "Novem Maximus", 166, 199, 66,); break;
                 
@@ -1243,7 +1243,7 @@ function Build_Ciphers() {
 }
 
 function Set_Categories() {
-	catArr = ["English", "Reverse", "Jewish", "Kabbalah", "Mathematical", "Fibonacci", "Other", "Foreign", "Arabic Alphabet","Polish Alphabet","Keyboard","Numbers","English Ordinal Custom","Latin","Elizabethan"]
+	catArr = ["English", "Reverse", "Jewish", "Kabbalah", "Mathematical", "Fibonacci", "Other", "Foreign", "Arabic Alphabet","Polish Alphabet","Keyboard","Numbers","English Ordinal Custom","Old Italic","Elizabethan"]
 
 	cipherArray["English Ordinal"] = "English"
 	cipherArray["Full Reduction"] = "English"
@@ -1320,8 +1320,8 @@ function Set_Categories() {
     cipherArray["Masonic"] = "English Ordinal Custom"
     cipherArray["Foundation"] = "English Ordinal Custom"
     
-    cipherArray["Archaic Latin"] = "Latin"
-    cipherArray["Old Italic Latin"] = "Latin"
+    cipherArray["Archaic Latin"] = "Old Italic"
+    cipherArray["Etruscan"] = "Old Italic"
         
 	cipherArray["Semiprime"] = "Numbers"
 	cipherArray["Deficient number"] = "Numbers"
