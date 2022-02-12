@@ -1121,9 +1121,9 @@ function Build_Ciphers() {
 
 			case "Roman Numerals": allCiphers[allCiphers.length] = new cipher(key, "RomanNum", 115, 194, 251); break;
           		
-			case "ALW Kabbalah": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 64, 0, "ALW"); break;
-			case "KFW Kabbalah": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 88, 0, "KFW"); break;
-			case "LCH Kabbalah": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 93, 73, "LCH"); break;
+			case "English Qaballa": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 64, 0, "ALW"); break;
+			case "Cipher X": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 88, 0, "KFW"); break;
+			case "Trigrammaton Qabalah": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 93, 73, "LCH"); break;
 
 			case "English Sumerian": allCiphers[allCiphers.length] = new cipher(key, "English", 169, 208, 142, "SumerianNum"); break;
 			case "Reverse English Sumerian": allCiphers[allCiphers.length] = new cipher(key, "English", 220, 208, 148, "Reverse", "SumerianNum"); break;
@@ -1271,9 +1271,9 @@ function Set_Categories() {
 	cipherArray["Beatus Reduction"] = "Latin"
 	cipherArray["Roman Numerals"] = "Latin"
 	
-	cipherArray["ALW Kabbalah"] = "Thelemic"
-	cipherArray["KFW Kabbalah"] = "Thelemic"
-	cipherArray["LCH Kabbalah"] = "Thelemic"
+	cipherArray["English Qaballa"] = "Thelemic"
+	cipherArray["Cipher X"] = "Thelemic"
+	cipherArray["Trigrammaton Qabalah"] = "Thelemic"
     cipherArray["Alphanumeric Qabbala"] = "Thelemic"
 
 	cipherArray["English Sumerian"] = "Mathematical"
