@@ -797,7 +797,7 @@ function Open_Ciphers(impOpt = cOption, impBool = false) {
 	}
 
 	hStr += '<div class="ButtonSection"><button class="CipherButton" onclick="No_Ciphers(true)" value="NoCiphers"><B>Empty</B></button>'
-	hStr += '<button class="CipherButton" onclick="Add_BaseCiphers(true)" value="BaseCiphers"><B>Base Ciphers</B></button>'
+	hStr += '<button class="CipherButton" onclick="Add_BaseCiphers(true)" value="BaseCiphers"><B>Default</B></button>'
 	hStr += '<button class="CipherButton" onclick="Add_AllCiphers(true)" value="AllCiphers"><B>All Ciphers</B></button>'
 	hStr += '<BR></td></tr></table></center>'
 
