@@ -1224,7 +1224,7 @@ function Build_Ciphers() {
 }
 
 function Set_Categories() {
-	catArr = ["English", "Reverse", "Elizabethan", "Illuminati", "Latin", "Thelemic", "Mathematical", "Fibonacci", "Other", "Keyboard", "Numbers", "English Ordinal Custom", "Foreign", "Old Italic"]
+	catArr = ["English", "Reverse", "Elizabethan", "Illuminati", "Latin", "Thelemic", "Mathematical", "English Ordinal Custom", "Fibonacci", "Other", "Keyboard", "Numbers", "Foreign", "Old Italic"]
 
 	cipherArray["English Ordinal"] = "English"
 	cipherArray["Full Reduction"] = "English"
@@ -1274,7 +1274,6 @@ function Set_Categories() {
 	cipherArray["English Qaballa"] = "Thelemic"
 	cipherArray["Cipher X"] = "Thelemic"
 	cipherArray["Trigrammaton Qabalah"] = "Thelemic"
-    cipherArray["Alphanumeric Qabbala"] = "Thelemic"
 
 	cipherArray["English Sumerian"] = "Mathematical"
 	cipherArray["Reverse English Sumerian"] = "Mathematical"
@@ -1290,6 +1289,20 @@ function Set_Categories() {
 	cipherArray["Reverse Pentagonal Numbers"] = "Mathematical"
 	cipherArray["Tesla Numbers 369"] = "Mathematical"
 
+	cipherArray["English Ordinal Starting at 2"] = "English Ordinal Custom"
+	cipherArray["English Ordinal Starting at 3"] = "English Ordinal Custom"
+    cipherArray["English Ordinal Starting at 4"] = "English Ordinal Custom"
+    cipherArray["English Ordinal Starting at 5"] = "English Ordinal Custom"
+    cipherArray["English Ordinal Starting at 6"] = "English Ordinal Custom"
+    cipherArray["English Ordinal Starting at 7"] = "English Ordinal Custom"
+    cipherArray["English Ordinal Starting at 8"] = "English Ordinal Custom"
+    cipherArray["English Ordinal Starting at 9"] = "English Ordinal Custom"
+   	cipherArray["Alphanumeric Qabbala"] = "English Ordinal Custom"
+    cipherArray["Master"] = "English Ordinal Custom"
+    cipherArray["Master Builder"] = "English Ordinal Custom"
+    cipherArray["Masonic"] = "English Ordinal Custom"
+    cipherArray["Foundation"] = "English Ordinal Custom"
+    
     cipherArray["Fibonacci"] = "Fibonacci"
 	cipherArray["Fibonacci Reduced"] = "Fibonacci"
 	cipherArray["Reverse Fibonacci"] = "Fibonacci"
@@ -1302,19 +1315,6 @@ function Set_Categories() {
 	cipherArray["Inversed"] = "Other"
     cipherArray["Novem Maximus"] = "Other"
         
-	cipherArray["English Ordinal Starting at 2"] = "English Ordinal Custom"
-	cipherArray["English Ordinal Starting at 3"] = "English Ordinal Custom"
-    cipherArray["English Ordinal Starting at 4"] = "English Ordinal Custom"
-    cipherArray["English Ordinal Starting at 5"] = "English Ordinal Custom"
-    cipherArray["English Ordinal Starting at 6"] = "English Ordinal Custom"
-    cipherArray["English Ordinal Starting at 7"] = "English Ordinal Custom"
-    cipherArray["English Ordinal Starting at 8"] = "English Ordinal Custom"
-    cipherArray["English Ordinal Starting at 9"] = "English Ordinal Custom"
-    cipherArray["Master"] = "English Ordinal Custom"
-    cipherArray["Master Builder"] = "English Ordinal Custom"
-    cipherArray["Masonic"] = "English Ordinal Custom"
-    cipherArray["Foundation"] = "English Ordinal Custom"
-    
     cipherArray["Archaic Latin"] = "Old Italic"
     cipherArray["Etruscan"] = "Old Italic"
         
