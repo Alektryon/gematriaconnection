@@ -52,7 +52,14 @@ class cipher {
 				this.vArr = [0, 0, 100, 500, 0, 0, 0, 0, 1, 1, 0, 50, 1000, 0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 10, 0, 0]
 				this.vArr2 = [0, 0, 100, 500, 0, 0, 0, 0, 1, 1, 0, 50, 1000, 0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 10, 0, 0]
 				break;
-
+			case "Simplex":
+				for (y = 0; y < 26; y++) {
+					this.cArr[y] = (y + 97)
+					this.cArr2[y] = (y + 65)
+				}
+				this.vArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 3, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 19, 19, 20, 21, 22]
+				this.vArr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 3, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 19, 19, 20, 21, 22]
+				break;
 			case "Hebrew G":
 				this.cArr = [1488, 1489, 1490, 1491, 1492, 1493, 1494, 1495, 1496, 1497, 1499, 1500, 1502, 1504, 1505, 1506, 1508, 1510, 1511, 1512, 1513, 1514, 1498, 1501, 1503, 1507, 1509]
 				for (y = 0; y < 22; y++) {
@@ -1110,16 +1117,14 @@ function Build_Ciphers() {
 			case "Agrippa Key": allCiphers[allCiphers.length] = new cipher(key, "Latin", 153, 102, 255, "Extend"); break;
 			case "Agrippa Ordinal": allCiphers[allCiphers.length] = new cipher(key, "Latin", 154, 121, 227); break;
 			case "Agrippa Reduction": allCiphers[allCiphers.length] = new cipher(key, "Latin", 159, 99, 197, "FullReduction"); break;
-
 			case "Reverse Agrippa": allCiphers[allCiphers.length] = new cipher(key, "Latin", 80, 200, 120, "Reverse", "Extend"); break;
 			case "Reverse Agrippa Ordinal": allCiphers[allCiphers.length] = new cipher(key, "Latin", 88, 208, 128, "Reverse"); break;
 			case "Reverse Agrippa Reduction": allCiphers[allCiphers.length] = new cipher(key, "Latin", 72, 192, 112, "Reverse","FullReduction"); break;
-
 			case "Beatus of Liebana": allCiphers[allCiphers.length] = new cipher(key, "English", 192, 66, 255, "BeatusExtended"); break;
 			case "Beatus Ordinal": allCiphers[allCiphers.length] = new cipher(key, "English", 210, 87, 255, "BeatusOrdinal"); break;
 			case "Beatus Reduction": allCiphers[allCiphers.length] = new cipher(key, "English", 225, 107, 255, "BeatusReduction"); break;
-
 			case "Roman Numerals": allCiphers[allCiphers.length] = new cipher(key, "RomanNum", 115, 194, 251); break;
+			case "Cabala Simplex": allCiphers[allCiphers.length] = new cipher(key, "Simplex", 64, 224, 208); break;
           		
 			case "English Qaballa": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 64, 0, "ALW"); break;
 			case "Cipher X": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 88, 0, "KFW"); break;
@@ -1270,6 +1275,7 @@ function Set_Categories() {
 	cipherArray["Beatus Ordinal"] = "Latin"
 	cipherArray["Beatus Reduction"] = "Latin"
 	cipherArray["Roman Numerals"] = "Latin"
+	cipherArray["Cabala Simplex"] = "Latin"
 	
 	cipherArray["English Qaballa"] = "Thelemic"
 	cipherArray["Cipher X"] = "Thelemic"
