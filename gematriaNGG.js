@@ -1094,9 +1094,9 @@ function Build_Ciphers() {
 			case "English Ordinal": allCiphers[allCiphers.length] = new cipher(key, "English", 0, 186, 0); break;
 			case "English Extended": allCiphers[allCiphers.length] = new cipher(key, "English", 218, 226, 0, "Extend"); break;
 			case "Francis Bacon": allCiphers[allCiphers.length] = new cipher(key, "English", 150, 244, 77, "Bacon"); break;
-			case "Bacon Inversed": allCiphers[allCiphers.length] = new cipher(key, "English", 22, 130, 99, "BaconInversed"); break;
+			case "Bacon Inversed": allCiphers[allCiphers.length] = new cipher(key, "English", 35, 163, 20, "BaconInversed"); break;
 			case "Franc Baconis": allCiphers[allCiphers.length] = new cipher(key, "English", 93, 187, 88, "Baconis"); break;
-			case "Baconis Inversed": allCiphers[allCiphers.length] = new cipher(key, "English", 99, 22, 188, "BaconisInversed"); break;	
+			case "Baconis Inversed": allCiphers[allCiphers.length] = new cipher(key, "English", 101, 123, 236, "BaconisInversed"); break;	
 			case "Satanic": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 0, 0, "SatanicNum"); break;
 
 			case "Reverse Full Reduction": allCiphers[allCiphers.length] = new cipher(key, "English", 100, 226, 226, "Reverse", "FullReduction"); break;
@@ -1155,14 +1155,14 @@ function Build_Ciphers() {
 			case "Keypad": allCiphers[allCiphers.length] = new cipher(key, "Keypad", 255, 126, 255); break;
 			case "Isisian Codes": allCiphers[allCiphers.length] = new cipher(key, "Isisian Codes", 220,255,103); break;
 		    case "Inversed": allCiphers[allCiphers.length] = new cipher(key, "Inversed", 210,220,240); break;
-			case "English Ordinal Starting at 2": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 2", 121,22,124); break;
-            case "English Ordinal Starting at 3": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 3", 121,22,124); break;    
-            case "English Ordinal Starting at 4": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 4", 121,22,124); break;   
-            case "English Ordinal Starting at 5": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 5", 121,22,124); break;
-            case "English Ordinal Starting at 6": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 6", 121,22,124); break;
-            case "English Ordinal Starting at 7": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 7", 121,22,124); break;    
-            case "English Ordinal Starting at 8": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 8", 121,22,124); break;   
-            case "English Ordinal Starting at 9": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 9", 121,22,124); break;
+			case "English Ordinal Starting at 2": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 2", 33, 176, 228); break;
+            case "English Ordinal Starting at 3": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 3", 33, 176, 228); break;    
+            case "English Ordinal Starting at 4": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 4", 33, 176, 228); break;   
+            case "English Ordinal Starting at 5": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 5", 33, 176, 228); break;
+            case "English Ordinal Starting at 6": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 6", 33, 176, 228); break;
+            case "English Ordinal Starting at 7": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 7", 33, 176, 228); break;    
+            case "English Ordinal Starting at 8": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 8", 33, 176, 228); break;   
+            case "English Ordinal Starting at 9": allCiphers[allCiphers.length] = new cipher(key, "English Ordinal Starting at 9", 33, 176, 228); break;
             case "Alphanumeric Qabbala": allCiphers[allCiphers.length] = new cipher(key, "Alphanumeric Qabbala", 191,195,127); break;   
             case "Master": allCiphers[allCiphers.length] = new cipher(key, "Master", 77,129,200); break;   
             case "Master Builder": allCiphers[allCiphers.length] = new cipher(key, "Master Builder", 77,172,148); break;   
