@@ -2,7 +2,7 @@ var ciphers_per_row = 6; ChartMax = 36
 var cOption = "English"
 var breakCipher, miscContents
 var pixelcount = 0; breakArr = []; pArr= []; mArr = []
-var opt_Reduce = false; opt_Quotes = true; opt_Summ = true; opt_Breakdown = "Chart"; opt_LetterCount = true
+var opt_Reduce = false; opt_Quotes = true; opt_Summ = true; opt_Breakdown = "Compact"; opt_LetterCount = true
 var opt_Chart = true; opt_Shortcuts = true; opt_Headers = true; opt_InTable = false
 
 function Page_Launch() {
