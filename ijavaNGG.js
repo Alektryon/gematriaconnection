@@ -270,9 +270,9 @@ function Populate_Breakdown(impName = breakCipher, impBool = false) {
 
 				if (aCipher.cp[x] !== " ") {
 					if (String(aCipher.cp[x]).substring(0, 3) == "num") {
-						rStr += '<td class="BreakChar2">' + aCipher.cp[x].substring(3, aCipher.cp[x].length) + '</td>'
+						rStr += '<td class="BreakChar">' + aCipher.cp[x].substring(3, aCipher.cp[x].length) + '</td>'
 					} else {
-						rStr += '<td class="BreakChar2">' + String.fromCharCode(aCipher.cp[x]) + '</td>'
+						rStr += '<td class="BreakChar">' + String.fromCharCode(aCipher.cp[x]) + '</td>'
 					}
 				} else {
 					rStr += '<td class="BreakWordSum" rowspan="2">' + aCipher.sumArr[wCount] + '</td>'
