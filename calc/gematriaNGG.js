@@ -1209,12 +1209,12 @@ function Build_Ciphers() {
             case "Novem Maximus": allCiphers[allCiphers.length] = new cipher(key, "Novem Maximus", 166, 199, 66,); break;
                 
 				// Elizabethan Ciphers
-			case "Elizabethan Simple": allCiphers[allCiphers.length] = new cipher(key, "BaconSimple", 80, 235, 21); break;
-			case "Elizabethan Reverse": allCiphers[allCiphers.length] = new cipher(key, "BaconReverse", 0, 186, 0); break;
-			case "Elizabethan Short": allCiphers[allCiphers.length] = new cipher(key, "BaconShort", 100, 216, 209); break;
-			case "Elizabethan Short Rev": allCiphers[allCiphers.length] = new cipher(key, "BaconShortRev", 88, 125, 254); break;
-			case "Elizabethan Kaye": allCiphers[allCiphers.length] = new cipher(key, "BaconKaye", 220, 93, 73); break;
-			case "Modern Kaye": allCiphers[allCiphers.length] = new cipher(key, "ModernKaye", 230, 153, 163); break;						
+			case "Elizabethan Simple": allCiphers[allCiphers.length] = new cipher(key, "English", 80, 235, 21, "BaconSimple"); break;
+			case "Elizabethan Reverse": allCiphers[allCiphers.length] = new cipher(key, "English", 0, 186, 0, "BaconReverse"); break;
+			case "Elizabethan Short": allCiphers[allCiphers.length] = new cipher(key, "English", 100, 216, 209, "BaconShort"); break;
+			case "Elizabethan Short Reverse": allCiphers[allCiphers.length] = new cipher(key, "English", 88, 125, 254, "BaconShortRev"); break;
+			case "Elizabethan Kaye": allCiphers[allCiphers.length] = new cipher(key, "English", 220, 93, 73, "BaconKaye"); break;
+			case "Modern Kaye": allCiphers[allCiphers.length] = new cipher(key, "English", 230, 153, 163, "ModernKaye"); break;
 
 			case "English Custom": allCiphers[allCiphers.length] = new cipher(key, "English", 236, 236, 177, "EnglishCustom"); break;
 		}
