@@ -704,17 +704,13 @@ function Build_CharTable(impCipher) {
 		return
 	}
 
-	if (impCipher.Nickname == "Francis Bacon" || impCipher.Nickname == "Franc Baconis" || impCipher.Nickname == "Reverse Francis Bacon" || impCipher.Nickname == "Reverse Franc Baconis") {
-		rStr = '<center><table id="ChartTableThin" '
+	if (impCipher.cArr.length > 40) {
+		rStr = '<center><table id="ChartTableThin">'
 	} else {
-		rStr = '<table id="ChartTable" '
+		rStr = '<table id="ChartTable">'
 	}
 	
 	// gradient table background based on cipher color
-	rStr += 'style="background: rgb(16,16,16) -webkit-linear-gradient(0deg,rgba('+impCipher.RGB.join()+',0.2),#00000080); '
-	rStr += 'background: rgb(16,16,16) -o-linear-gradient(0deg,rgba('+impCipher.RGB.join()+',0.2),#00000080); '
-	rStr += 'background: rgb(16,16,16) -moz-linear-gradient(0deg,rgba('+impCipher.RGB.join()+',0.2),#00000080); '
-	rStr += 'background: rgb(16,16,16) linear-gradient(0deg,rgba('+impCipher.RGB.join()+',0.2),#00000080);">'
 	rStr += '<tr>'
 
 	rStr += '<td colspan="' + impCipher.cArr.length + '">'
