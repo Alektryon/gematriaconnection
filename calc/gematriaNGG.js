@@ -1101,6 +1101,7 @@ function Build_Ciphers() {
 			case "Alt Case Sensitive": allCiphers[allCiphers.length] = new cipher(key, "English", 93, 187, 88, "Baconis"); break;
 			case "Case Sensitive SC": allCiphers[allCiphers.length] = new cipher(key, "English", 35, 163, 20, "BaconInversed"); break;
 			case "Alt Case Sensitive SC": allCiphers[allCiphers.length] = new cipher(key, "English", 101, 123, 236, "BaconisInversed"); break;	
+			case "Satanic": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 0, 0, "SatanicNum"); break;
 
 			case "Reverse Full Reduction": allCiphers[allCiphers.length] = new cipher(key, "English", 100, 226, 226, "Reverse", "FullReduction"); break;
 			case "Reverse Single Reduction": allCiphers[allCiphers.length] = new cipher(key, "English", 100, 216, 209, "Reverse", "SingleReduction"); break;
@@ -1112,6 +1113,7 @@ function Build_Ciphers() {
 			case "Rev Alt Case Sensitive": allCiphers[allCiphers.length] = new cipher(key, "English", 111, 193, 121, "Reverse", "Baconis"); break;
 			case "Rev Case Sensitive SC": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 163, 88, "Reverse", "BaconInversed"); break;
 			case "Rev Alt Case Sensitive SC": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 111, 121, "Reverse", "BaconisInversed"); break;
+			case "Reverse Satanic": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 51, 51, "Reverse", "SatanicNum"); break;
 
 			case "Illuminati Novice": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 255, 29, "IlluminatiNovice"); break;
 			case "Illuminati Reverse": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 189, 2, "IlluminatiReverse"); break;
@@ -1145,7 +1147,6 @@ function Build_Ciphers() {
            		case "Master": allCiphers[allCiphers.length] = new cipher(key, "Master", 102,139,235); break;   
          		case "Master Builder": allCiphers[allCiphers.length] = new cipher(key, "Master Builder", 0,202,191); break;   
 		 	case "Masonic": allCiphers[allCiphers.length] = new cipher(key, "Masonic", 255,179,87); break;   
-			case "Satanic": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 0, 0, "SatanicNum"); break;
           		case "Foundation": allCiphers[allCiphers.length] = new cipher(key, "Foundation", 207,80,155); break;   
 
 			case "English Sumerian": allCiphers[allCiphers.length] = new cipher(key, "English", 169, 208, 142, "SumerianNum"); break;
@@ -1245,6 +1246,7 @@ function Set_Categories() {
 	cipherArray["Alt Case Sensitive"] = "English"
 	cipherArray["Case Sensitive SC"] = "English"
 	cipherArray["Alt Case Sensitive SC"] = "English"
+	cipherArray["Satanic"] = "English"
 
 	cipherArray["Reverse Ordinal"] = "Reverse"
 	cipherArray["Reverse Full Reduction"] = "Reverse"
@@ -1256,6 +1258,7 @@ function Set_Categories() {
 	cipherArray["Rev Alt Case Sensitive"] = "Reverse"
 	cipherArray["Rev Case Sensitive SC"] = "Reverse"
 	cipherArray["Rev Alt Case Sensitive SC"] = "Reverse"
+	cipherArray["Reverse Satanic"] = "Reverse"
 
 	cipherArray["Elizabethan Simple"] = "Elizabethan"
 	cipherArray["Elizabethan Reverse"] = "Elizabethan"
@@ -1296,7 +1299,6 @@ function Set_Categories() {
   	cipherArray["Master"] = "Ordinal Custom"
     	cipherArray["Master Builder"] = "Ordinal Custom"
     	cipherArray["Masonic"] = "Ordinal Custom"
-	cipherArray["Satanic"] = "Ordinal Custom"
     	cipherArray["Foundation"] = "Ordinal Custom"
     
 	cipherArray["English Sumerian"] = "Mathematical"
