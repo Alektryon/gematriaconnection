@@ -721,7 +721,7 @@ function Build_CharTable(impCipher) {
 
 	if (impCipher.cArr.length < 30 && impCipher.vArr.reduce(getSum) < 200) {
 		for (x = 0; x < impCipher.cArr.length; x++) {
-			rStr += '<td class="ChartChar" font style="color: rgb(' + impCipher.RGB.join() +')">' + String.fromCharCode(impCipher.cArr[x]) + '</td>'
+			rStr += '<td class="ChartChar">' + String.fromCharCode(impCipher.cArr[x]) + '</td>'
 		}
 		rStr += '</tr><tr>'
 		for (x = 0; x < impCipher.cArr.length; x++) {
@@ -737,9 +737,9 @@ function Build_CharTable(impCipher) {
 				}
 				rStr += '</tr><tr>'
 			}
-			rStr += '<td class="ChartChar" font style="color: rgb(' + impCipher.RGB.join() +')">' + String.fromCharCode(impCipher.cArr[x]) + '</td>'
+			rStr += '<td class="ChartChar">' + String.fromCharCode(impCipher.cArr[x]) + '</td>'
 		}
-		if (impCipher.cArr.length % 2 == 1) { rStr += '<td class="ChartChar" font style="color: rgb(' + impCipher.RGB.join() +')"></td>' } // empty character cell to make even rows
+		if (impCipher.cArr.length % 2 == 1) { rStr += '<td class="ChartChar"></td>' } // empty character cell to make even rows
 		rStr += '</tr><tr>'
 		for (y; y < x; y++) {
 			rStr += '<td class="ChartVal">' + impCipher.vArr[y] + '</td>'
