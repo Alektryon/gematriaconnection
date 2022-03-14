@@ -261,7 +261,7 @@ body {
 }
 #ChartTable {
 	border-collapse: collapse;
-	/* background: rgb(21,21,21); */
+	background: rgb(21,21,21);
 	/* dynamically built based on cipher color */
 	/* background: -webkit-linear-gradient(-68deg,#ac32e4,#4801ff); */
 	/* background: -o-linear-gradient(-68deg,#ac32e4,#4801ff); */
