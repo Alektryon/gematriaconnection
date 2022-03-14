@@ -281,6 +281,7 @@ body {
 }
 #ChartTableThin {
 	border-collapse: collapse;
+	background: rgb(21,21,21);
 }
 #ChartTableThin td {
 	text-align: center;
