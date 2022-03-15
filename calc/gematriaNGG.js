@@ -1127,8 +1127,8 @@ function Build_Ciphers() {
 			case "Beatus of Liebana": allCiphers[allCiphers.length] = new cipher(key, "English", 192, 66, 255, "BeatusExtended"); break;
 			case "Beatus Ordinal": allCiphers[allCiphers.length] = new cipher(key, "English", 210, 87, 255, "BeatusOrdinal"); break;
 			case "Beatus Reduction": allCiphers[allCiphers.length] = new cipher(key, "English", 225, 107, 255, "BeatusReduction"); break;
-			case "Cabala Simplex": allCiphers[allCiphers.length] = new cipher(key, "Simplex", 64, 224, 208); break;
-			case "Roman Numerals": allCiphers[allCiphers.length] = new cipher(key, "RomanNum", 115, 194, 251); break;
+			case "Cabala Simplex": allCiphers[allCiphers.length] = new cipher(key, "Simplex", 115, 194, 251); break;
+			case "Roman Numerals": allCiphers[allCiphers.length] = new cipher(key, "RomanNum", 64, 224, 208); break;
 			case "Valerius Probus": allCiphers[allCiphers.length] = new cipher(key, "ValeriusProbus", 41, 199, 157); break;
 				
 			case "English Qaballa": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 64, 0, "ALW"); break;
