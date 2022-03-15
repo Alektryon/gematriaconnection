@@ -122,9 +122,10 @@ class cipher {
 					this.cArr[y] = (y + 97)
 					this.cArr2[y] = (y + 65)
 				}
-				this.vArr = [1,1,2,3,5,8,13,21,34,55,89,144,233,233,144,89,55,34,21,13,8,5,3,2,1,1]
-				this.vArr2 = [1,1,2,3,5,8,13,21,34,55,89,144,233,233,144,89,55,34,21,13,8,5,3,2,1,1]
+		      		this.vArr = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025,121393]
+				this.vArr2 = [ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025,121393]
 				break;
+				
 			case "Fibonacci Reduced":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
@@ -133,8 +134,7 @@ class cipher {
 		 	       this.vArr = [1, 1, 2, 3, 5, 8, 4, 3, 7, 10, 8, 9, 1, 1, 2, 3, 5, 8, 4, 3, 7, 10, 8, 9, 1, 1]
 				this.vArr2 = [ 1, 1, 2, 3, 5, 8, 4, 3, 7, 10, 8, 9, 1, 1, 2, 3, 5, 8, 4, 3, 7, 10, 8, 9, 1, 1]
 				break;
-				
-				
+			
 			case "Barnis Cipher":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
@@ -1159,8 +1159,8 @@ function Build_Ciphers() {
 			case "Reverse Squares": allCiphers[allCiphers.length] = new cipher(key, "English", 240, 225, 112, "Reverse", "SquareNum"); break;
 				
 			case "Fibonacci": allCiphers[allCiphers.length] = new cipher(key, "Fibonacci", 148,0,211); break;
-			case "Fibonacci Reduced": allCiphers[allCiphers.length] = new cipher(key, "Fibonacci Reduced", 188,0,211); break;
 			case "Reverse Fibonacci": allCiphers[allCiphers.length] = new cipher(key, "Fibonacci", 190,0,200, "Reverse"); break;
+			case "Fibonacci Reduced": allCiphers[allCiphers.length] = new cipher(key, "Fibonacci Reduced", 188,0,211); break;
 			case "Barni Yamumʹs Fibonacci Cipher": allCiphers[allCiphers.length] = new cipher(key, "Barnis Cipher", 199,0,220,); break;
 				
 			case "Septenary": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 153, 77, "SeptenaryNum"); break;
@@ -1315,9 +1315,9 @@ function Set_Categories() {
 	cipherArray["Reverse Pentagonal Numbers"] = "Mathematical"
 	cipherArray["Tesla Numbers 369"] = "Mathematical"
 
-    cipherArray["Fibonacci"] = "Fibonacci"
-	cipherArray["Fibonacci Reduced"] = "Fibonacci"
+	cipherArray["Fibonacci"] = "Fibonacci"
 	cipherArray["Reverse Fibonacci"] = "Fibonacci"
+	cipherArray["Fibonacci Reduced"] = "Fibonacci"
 	cipherArray["Barni Yamumʹs Fibonacci Cipher"] = "Fibonacci"
 	
 	cipherArray["Septenary"] = "Other"
@@ -1325,10 +1325,10 @@ function Set_Categories() {
 	cipherArray["Keypad"] = "Other"
 	cipherArray["Isisian Codes"] = "Other"
 	cipherArray["Mirror"] = "Other"
-    cipherArray["Novem Maximus"] = "Other"
+ 	cipherArray["Novem Maximus"] = "Other"
         
-    cipherArray["Archaic Latin"] = "Old Italic"
-    cipherArray["Etruscan"] = "Old Italic"
+    	cipherArray["Archaic Latin"] = "Old Italic"
+    	cipherArray["Etruscan"] = "Old Italic"
         
 	cipherArray["Semiprime"] = "Numbers"
 	cipherArray["Deficient number"] = "Numbers"
