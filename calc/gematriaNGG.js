@@ -1234,7 +1234,7 @@ function Build_Ciphers() {
 }
 
 function Set_Categories() {
-	catArr = ["English", "Reverse", "Elizabethan", "Illuminati", "Latin", "Thelemic", "Ordinal Custom", "Mathematical", "Fibonacci", "Other", "Keyboard", "Numbers", "Foreign", "Old Italic"]
+	catArr = ["English", "Reverse", "Elizabethan", "Illuminati", "Latin", "Thelemic", "Ordinal Custom", "Mathematical", "Fibonacci", "Other", "Keyboard", "Numbers", "Foreign", "Old Italic", "Custom"]
 
 	cipherArray["English Ordinal"] = "English"
 	cipherArray["Full Reduction"] = "English"
