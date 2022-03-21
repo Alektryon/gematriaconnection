@@ -2,7 +2,7 @@ var ciphers_per_row = 4; ChartMax = 36
 var cOption = "English"
 var breakCipher
 var pixelcount = 0; breakArr = []; pArr= []; mArr = []
-var opt_Reduce = true; opt_Quotes = true; opt_Summ = true; opt_Breakdown = "Compact"; opt_LetterCount = true
+var opt_Reduce = false; opt_Quotes = true; opt_Summ = true; opt_Breakdown = "Compact"; opt_LetterCount = true
 var opt_Chart = true; opt_Shortcuts = true; opt_Headers = true;
 
 var opt_PhraseLimit = 5 // word limit to enter input as separate phrases, "End" key
