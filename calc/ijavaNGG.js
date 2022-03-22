@@ -383,7 +383,7 @@ function Populate_Breakdown(impName = breakCipher, impBool = false) {
 						rStr += '<td class="BreakChar2">' + String.fromCharCode(aCipher.cp[x]) + '</td>'
 					}
 				} else {
-					rStr += '<td class="BreakWordSum" rowspan="2">' + aCipher.sumArr[wCount] + '</td>'
+					rStr += '<td class="BreakWordSum" rowspan="2"><font style="color: RGB(' + aCipher.RGB.join() + ')">' + aCipher.sumArr[wCount] + '</td>'
 
 					/*if (breakArr.indexOf(wCount) > -1) {
 						for (z; z < x; z++) {
