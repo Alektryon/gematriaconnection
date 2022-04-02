@@ -142,7 +142,8 @@ function newHistory(phr, upd_table) { // called from function navHistory(impNum)
 			if (hSpot > -1) { // if element is in history
 				sHistory.splice(hSpot, 1) // remove it from array
 			}
-			sHistory.unshift(phr) // insert in the beginning of array
+		/*	sHistory.unshift(phr) // insert in the beginning of array	*/
+			sHistory.push(phr) // insert it at the top
 		}
 	}
 	
