@@ -1059,7 +1059,7 @@ function Build_Ciphers() {
 			case "Cipher X": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 88, 0, "KFW"); break;
 			case "Trigrammaton Qabalah": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 93, 73, "LCH"); break;
 			case "Alphanumeric Qabbala": allCiphers[allCiphers.length] = new cipher(key, "AQ", 191,195,127); break;   
-			case "Abrahadabra Cipher": allCiphers[allCiphers.length] = new cipher(key, "Abrahadabra", 0,200,172); break;   
+			case "Abrahadabra Cipher": allCiphers[allCiphers.length] = new cipher(key, "Abrahadabra", 222,172,0); break;   
 			case "Gematria of Nothing I": allCiphers[allCiphers.length] = new cipher(key, "GoN1", 46, 158, 214); break;
 			case "Gematria of Nothing II": allCiphers[allCiphers.length] = new cipher(key, "GoN2", 80, 183, 220); break;
 
