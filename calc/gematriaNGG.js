@@ -389,21 +389,29 @@ class cipher {
 				this.vArr = [9,18,27,36,45,54,63,72,81,90,99,108,117,126,135,144,153,162,171,180,189,198,207,216,225,234]
 				this.vArr2 = [9,18,27,36,45,54,63,72,81,90,99,108,117,126,135,144,153,162,171,180,189,198,207,216,225,234]
 				break;
-			case "GoN1":
+			case "FoolsKey":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
 					this.cArr2[y] = (y + 65)
 				}
-				this.vArr = [13,12,11,10,9,8,7,6,5,4,3,2,1,0,-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,-11,-12]
-				this.vArr2 = [13,12,11,10,9,8,7,6,5,4,3,2,1,0,-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,-11,-12]
+				this.vArr = [1,2,3,4,5,6,7,8,9,10,11,12,13,-13,-12,-11,-10,-9,-8,-7,-6,-5,-4,-3,-2,-1]
+				this.vArr2 = [1,2,3,4,5,6,7,8,9,10,11,12,13,-13,-12,-11,-10,-9,-8,-7,-6,-5,-4,-3,-2,-1]
 				break;
-			case "GoN2":
+			case "ZeroingKey":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
 					this.cArr2[y] = (y + 65)
 				}
 				this.vArr = [13,12,11,10,9,8,7,6,5,4,3,2,1,-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,-11,-12,-13]
 				this.vArr2 = [13,12,11,10,9,8,7,6,5,4,3,2,1,-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,-11,-12,-13]
+				break;
+			case "0Z":
+				for (y = 0; y < 36; y++) {
+				this.cArr = [48,49,50,51,52,53,54,55,56,57,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122]
+				this.cArr2 = [48,49,50,51,52,53,54,55,56,57,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90]
+				this.vArr = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,-17,-16,-15,-14,-13,-12,-11,-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0]
+				this.vArr2 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,-17,-16,-15,-14,-13,-12,-11,-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0]
+                }
 				break;
 	
 		}
@@ -1041,6 +1049,13 @@ function Build_Ciphers() {
 			case "Rev Alt Case Sensitive SC": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 111, 121, "Reverse", "BaconisInversed"); break;
 			case "Reverse Satanic": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 51, 51, "Reverse", "SatanicNum"); break;
 
+			case "Bacon Simple": allCiphers[allCiphers.length] = new cipher(key, "English", 80, 235, 21, "BaconSimple"); break;
+			case "Bacon Reverse": allCiphers[allCiphers.length] = new cipher(key, "English", 0, 186, 0, "BaconReverse"); break;
+			case "Bacon Short": allCiphers[allCiphers.length] = new cipher(key, "English", 100, 216, 209, "BaconShort"); break;
+			case "Bacon Short Reverse": allCiphers[allCiphers.length] = new cipher(key, "English", 88, 125, 254, "BaconShortRev"); break;
+			case "Bacon Kaye": allCiphers[allCiphers.length] = new cipher(key, "English", 220, 93, 73, "BaconKaye"); break;
+			case "Modern Kaye": allCiphers[allCiphers.length] = new cipher(key, "English", 230, 153, 163, "ModernKaye"); break;
+
 			case "Illuminati Novice": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 255, 29, "IlluminatiNovice"); break;
 			case "Illuminati Reverse": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 189, 2, "IlluminatiReverse"); break;
 
@@ -1053,29 +1068,27 @@ function Build_Ciphers() {
 			case "Cabala Simplex": allCiphers[allCiphers.length] = new cipher(key, "Simplex", 115, 194, 251); break;
 			case "Roman Numerals": allCiphers[allCiphers.length] = new cipher(key, "RomanNum", 64, 224, 208); break;
 			case "Valerius Probus": allCiphers[allCiphers.length] = new cipher(key, "ValeriusProbus", 41, 199, 157); break;
-      		case "Etruscan": allCiphers[allCiphers.length] = new cipher(key, "Etruscan", 255, 99, 66); break;
+			case "Etruscan": allCiphers[allCiphers.length] = new cipher(key, "Etruscan", 255, 99, 66); break;
 				
 			case "English Qaballa": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 64, 0, "ALW"); break;
 			case "Cipher X": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 88, 0, "KFW"); break;
 			case "Trigrammaton Qabalah": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 93, 73, "LCH"); break;
 			case "Alphanumeric Qabbala": allCiphers[allCiphers.length] = new cipher(key, "AQ", 191,195,127); break;   
 			case "Abrahadabra Cipher": allCiphers[allCiphers.length] = new cipher(key, "Abrahadabra", 222,172,0); break;   
-			case "Gematria of Nothing I": allCiphers[allCiphers.length] = new cipher(key, "GoN1", 46, 158, 214); break;
-			case "Gematria of Nothing II": allCiphers[allCiphers.length] = new cipher(key, "GoN2", 80, 183, 220); break;
 
 			case "Ordinal Starting at 2": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 2", 21, 187, 14); break;
-      		case "Ordinal Starting at 3": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 3", 40, 182, 24); break;    
-       		case "Ordinal Starting at 4": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 4", 59, 177, 34); break;   
-       		case "Ordinal Starting at 5": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 5", 78, 172, 44); break;
-        	case "Ordinal Starting at 6": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 6", 97, 167, 54); break;
-       	  	case "Ordinal Starting at 7": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 7", 116, 162, 64); break;    
-       		case "Ordinal Starting at 8": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 8", 135, 157, 74); break;   
-        	case "Ordinal Starting at 9": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 9", 154, 152, 84); break;
-        	case "Ordinal Starting at 10": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 10", 191,195,127); break;   
-           	case "Master": allCiphers[allCiphers.length] = new cipher(key, "Master", 102,139,235); break;   
-         	case "Master Builder": allCiphers[allCiphers.length] = new cipher(key, "Master Builder", 0,202,191); break;   
+			case "Ordinal Starting at 3": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 3", 40, 182, 24); break;    
+			case "Ordinal Starting at 4": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 4", 59, 177, 34); break;   
+			case "Ordinal Starting at 5": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 5", 78, 172, 44); break;
+			case "Ordinal Starting at 6": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 6", 97, 167, 54); break;
+			case "Ordinal Starting at 7": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 7", 116, 162, 64); break;    
+			case "Ordinal Starting at 8": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 8", 135, 157, 74); break;   
+			case "Ordinal Starting at 9": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 9", 154, 152, 84); break;
+			case "Ordinal Starting at 10": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 10", 191,195,127); break;   
+			case "Master": allCiphers[allCiphers.length] = new cipher(key, "Master", 102,139,235); break;   
+			case "Master Builder": allCiphers[allCiphers.length] = new cipher(key, "Master Builder", 0,202,191); break;   
 		 	case "Masonic": allCiphers[allCiphers.length] = new cipher(key, "Masonic", 255,179,87); break;   
-          	case "Foundation": allCiphers[allCiphers.length] = new cipher(key, "Foundation", 207,80,155); break;   
+			case "Foundation": allCiphers[allCiphers.length] = new cipher(key, "Foundation", 207,80,155); break;   
 
 			case "English Sumerian": allCiphers[allCiphers.length] = new cipher(key, "English", 169, 208, 142, "SumerianNum"); break;
 			case "Reverse English Sumerian": allCiphers[allCiphers.length] = new cipher(key, "English", 220, 208, 148, "Reverse", "SumerianNum"); break;
@@ -1085,6 +1098,10 @@ function Build_Ciphers() {
 			case "Reverse Primes": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 209, 145, "Reverse", "PrimeNum"); break;
 			case "Reverse Trigonal": allCiphers[allCiphers.length] = new cipher(key, "English", 238, 191, 112, "Reverse", "TriangleNum"); break;
 			case "Reverse Squares": allCiphers[allCiphers.length] = new cipher(key, "English", 240, 225, 112, "Reverse", "SquareNum"); break;
+
+			case "Foolʹs Key": allCiphers[allCiphers.length] = new cipher(key, "FoolsKey", 46, 158, 214); break;
+			case "Zeroing Key": allCiphers[allCiphers.length] = new cipher(key, "ZeroingKey", 80, 183, 220); break;
+			case "Alphanumeric Zero": allCiphers[allCiphers.length] = new cipher(key, "0Z", 130, 201, 201); break;
 				
 			case "Fibonacci": allCiphers[allCiphers.length] = new cipher(key, "Fibonacci", 148,0,211); break;
 			case "Reverse Fibonacci": allCiphers[allCiphers.length] = new cipher(key, "Fibonacci", 190,0,200, "Reverse"); break;
@@ -1105,17 +1122,17 @@ function Build_Ciphers() {
 						
 			//Keyboard//
 			case "Qwerty": allCiphers[allCiphers.length] = new cipher(key, "Qwerty", 255,192,203); break;
-       		case "Reverse Qwerty": allCiphers[allCiphers.length] = new cipher(key, "Qwerty", 192,203,255, "Reverse"); break;
+			case "Reverse Qwerty": allCiphers[allCiphers.length] = new cipher(key, "Qwerty", 192,203,255, "Reverse"); break;
 			case "Qwertz": allCiphers[allCiphers.length] = new cipher(key, "Qwertz", 220,50,128); break;
-       		case "Reverse Qwertz": allCiphers[allCiphers.length] = new cipher(key, "Qwertz", 128,0,128, "Reverse"); break;
+			case "Reverse Qwertz": allCiphers[allCiphers.length] = new cipher(key, "Qwertz", 128,0,128, "Reverse"); break;
 			case "Azerty": allCiphers[allCiphers.length] = new cipher(key, "Azerty", 255,0,255); break;
-      		case "Reverse Azerty": allCiphers[allCiphers.length] = new cipher(key, "Azerty", 0,255,255, "Reverse"); break;
+			case "Reverse Azerty": allCiphers[allCiphers.length] = new cipher(key, "Azerty", 0,255,255, "Reverse"); break;
 					
 			case "Hebrew Reduction": allCiphers[allCiphers.length] = new cipher(key, "Hebrew G", 255, 189, 2, "FullReduction"); break;
 			case "Hebrew Ordinal": allCiphers[allCiphers.length] = new cipher(key, "Hebrew G", 255, 209, 36); break;
 			case "Hebrew Gematria": allCiphers[allCiphers.length] = new cipher(key, "Hebrew G", 255, 227, 93, "Extend"); break;
 			case "Hebrew Soffits": allCiphers[allCiphers.length] = new cipher(key, "Hebrew Soffits", 255, 251, 156, "Extend"); break;
-	       	case "Arabic": allCiphers[allCiphers.length] = new cipher(key, "Arabic", 255, 180, 180); break;			
+			case "Arabic": allCiphers[allCiphers.length] = new cipher(key, "Arabic", 255, 180, 180); break;			
 			case "Arabic Ordinal": allCiphers[allCiphers.length] = new cipher(key, "ArabicOrd", 240, 200, 195); break;
 			case "Arabic Reduction": allCiphers[allCiphers.length] = new cipher(key, "ArabicRed", 235, 200, 200); break;
   
@@ -1134,15 +1151,7 @@ function Build_Ciphers() {
 			case "RU Reverse Extended": allCiphers[allCiphers.length] = new cipher(key, "Russian", 253, 255, 119, "Reverse", "Extend"); break;
 			case "Old Church Slavonic": allCiphers[allCiphers.length] = new cipher(key, "OCSlavonic", 194, 145, 222, "Extend"); break;
 			case "Glagolitic": allCiphers[allCiphers.length] = new cipher(key, "Glagolitic", 222, 145, 194); break;
-                
-			// Elizabethan Ciphers
-			case "Bacon Simple": allCiphers[allCiphers.length] = new cipher(key, "English", 80, 235, 21, "BaconSimple"); break;
-			case "Bacon Reverse": allCiphers[allCiphers.length] = new cipher(key, "English", 0, 186, 0, "BaconReverse"); break;
-			case "Bacon Short": allCiphers[allCiphers.length] = new cipher(key, "English", 100, 216, 209, "BaconShort"); break;
-			case "Bacon Short Reverse": allCiphers[allCiphers.length] = new cipher(key, "English", 88, 125, 254, "BaconShortRev"); break;
-			case "Bacon Kaye": allCiphers[allCiphers.length] = new cipher(key, "English", 220, 93, 73, "BaconKaye"); break;
-			case "Modern Kaye": allCiphers[allCiphers.length] = new cipher(key, "English", 230, 153, 163, "ModernKaye"); break;
-
+				
 			case "English Custom": allCiphers[allCiphers.length] = new cipher(key, "English", 236, 236, 177, "EnglishCustom"); break;
 		}
 	}
@@ -1151,7 +1160,7 @@ function Build_Ciphers() {
 }
 
 function Set_Categories() {
-	catArr = ["English", "Reverse", "Baconian", "Illuminati", "Latin-Italic", "Thelemic", "Ordinal Custom", "Mathematical", "Fibonacci", "Other", "Keyboard", "Foreign", "Russian", "Custom"]
+	catArr = ["English", "Reverse", "Baconian", "Illuminati", "Latin-Italic", "Thelemic", "Ordinal Custom", "Mathematical", "Keys of Geometry", "Fibonacci", "Other", "Keyboard", "Foreign", "Russian", "Custom"]
 
 	cipherArray["English Ordinal"] = "English"
 	cipherArray["Full Reduction"] = "English"
@@ -1203,8 +1212,6 @@ function Set_Categories() {
 	cipherArray["Trigrammaton Qabalah"] = "Thelemic"
    	cipherArray["Alphanumeric Qabbala"] = "Thelemic"
    	cipherArray["Abrahadabra Cipher"] = "Thelemic"
-	cipherArray["Gematria of Nothing I"] = "Thelemic"
-	cipherArray["Gematria of Nothing II"] = "Thelemic"
 
 	cipherArray["Ordinal Starting at 2"] = "Ordinal Custom"
 	cipherArray["Ordinal Starting at 3"] = "Ordinal Custom"
@@ -1216,9 +1223,9 @@ function Set_Categories() {
 	cipherArray["Ordinal Starting at 9"] = "Ordinal Custom"
    	cipherArray["Ordinal Starting at 10"] = "Ordinal Custom"
   	cipherArray["Master"] = "Ordinal Custom"
-    cipherArray["Master Builder"] = "Ordinal Custom"
-    cipherArray["Masonic"] = "Ordinal Custom"
-    cipherArray["Foundation"] = "Ordinal Custom"
+	cipherArray["Master Builder"] = "Ordinal Custom"
+	cipherArray["Masonic"] = "Ordinal Custom"
+	cipherArray["Foundation"] = "Ordinal Custom"
     
 	cipherArray["English Sumerian"] = "Mathematical"
 	cipherArray["Reverse English Sumerian"] = "Mathematical"
@@ -1234,6 +1241,10 @@ function Set_Categories() {
 	cipherArray["Reverse Pentagonal Numbers"] = "Mathematical"
 	cipherArray["Tesla Numbers 369"] = "Mathematical"
 
+	cipherArray["Foolʹs Key"] = "Keys of Geometry"
+	cipherArray["Zeroing Key"] = "Keys of Geometry"
+	cipherArray["Alphanumeric Zero"] = "Keys of Geometry"
+
 	cipherArray["Fibonacci"] = "Fibonacci"
 	cipherArray["Reverse Fibonacci"] = "Fibonacci"
 	cipherArray["Fibonacci Reduced"] = "Fibonacci"
@@ -1247,9 +1258,9 @@ function Set_Categories() {
  	cipherArray["Novem Maximus"] = "Other"
         
 	cipherArray["Qwerty"] = "Keyboard"
-    cipherArray["Reverse Qwerty"] = "Keyboard"
+	cipherArray["Reverse Qwerty"] = "Keyboard"
 	cipherArray["Qwertz"] = "Keyboard"
-    cipherArray["Reverse Qwertz"] = "Keyboard"
+    	cipherArray["Reverse Qwertz"] = "Keyboard"
 	cipherArray["Azerty"] = "Keyboard"
 	cipherArray["Reverse Azerty"] = "Keyboard"
         
