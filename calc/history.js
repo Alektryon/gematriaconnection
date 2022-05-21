@@ -67,14 +67,14 @@ function dropHandler(ev) {
 		}
 
 		var uPhr = []
-		var a = -1 // i > -1 to add all phrases, i > 0 to ignore first line (table header)
-		if (uCiph[0] == "Word or Phrase") a = 0 // ignore table header
-		
-		for (i = userhist.length-1; i > a; i--) { // add lines in reverse order, so you don't have to read backwards
-			uPhr = userhist[i].split(";") // user phrase, load as array
-			newHistory(uPhr[0], false) // load only phrase (first item), false flag doesn't update history
-			//newHistory(userhist[i], false) // false flag doesn't update history after a new phrase is added
-			//console.log(i+": "+userhist[i])
+		var a = 0
+		if (uCiph[0] == "Word or Phrase") a = 1 // ignore table header
+
+		for (i = a; i < userhist.length; i++) { // add lines in reverse order, so you don't have to read backwards
+    		uPhr = userhist[i].split(";") // user phrase, load as array
+    		newHistory(uPhr[0], false) // load only phrase (first item), false flag doesn't update history
+    		//newHistory(userhist[i], false) // false flag doesn't update history after a new phrase is added
+    		//console.log(i+": "+userhist[i])
 		}
 		
 		Open_History() // update table after all lines are added
