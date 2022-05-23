@@ -1101,7 +1101,7 @@ function Build_Ciphers() {
 
 			case "Foolʹs Key": allCiphers[allCiphers.length] = new cipher(key, "FoolsKey", 46, 158, 214); break;
 			case "Zeroing Key": allCiphers[allCiphers.length] = new cipher(key, "ZeroingKey", 80, 183, 220); break;
-			case "Alphanumeric Zero": allCiphers[allCiphers.length] = new cipher(key, "0Z", 130, 201, 201); break;
+			case "Alphanumeric Halves": allCiphers[allCiphers.length] = new cipher(key, "0Z", 130, 201, 201); break;
 				
 			case "Fibonacci": allCiphers[allCiphers.length] = new cipher(key, "Fibonacci", 148,0,211); break;
 			case "Reverse Fibonacci": allCiphers[allCiphers.length] = new cipher(key, "Fibonacci", 190,0,200, "Reverse"); break;
@@ -1160,7 +1160,7 @@ function Build_Ciphers() {
 }
 
 function Set_Categories() {
-	catArr = ["English", "Reverse", "Baconian", "Illuminati", "Latin-Italic", "Thelemic", "Ordinal Custom", "Mathematical", "Keys of Geometry", "Fibonacci", "Other", "Keyboard", "Foreign", "Russian", "Custom"]
+	catArr = ["English", "Reverse", "Baconian", "Illuminati", "Latin-Italic", "Thelemic", "Ordinal Custom", "Mathematical", "Cypher Keys", "Fibonacci", "Other", "Keyboard", "Foreign", "Russian", "Custom"]
 
 	cipherArray["English Ordinal"] = "English"
 	cipherArray["Full Reduction"] = "English"
@@ -1241,9 +1241,9 @@ function Set_Categories() {
 	cipherArray["Reverse Pentagonal Numbers"] = "Mathematical"
 	cipherArray["Tesla Numbers 369"] = "Mathematical"
 
-	cipherArray["Foolʹs Key"] = "Keys of Geometry"
-	cipherArray["Zeroing Key"] = "Keys of Geometry"
-	cipherArray["Alphanumeric Zero"] = "Keys of Geometry"
+	cipherArray["Foolʹs Key"] = "Cypher Keys"
+	cipherArray["Zeroing Key"] = "Cypher Keys"
+	cipherArray["Alphanumeric Halves"] = "Cypher Keys"
 
 	cipherArray["Fibonacci"] = "Fibonacci"
 	cipherArray["Reverse Fibonacci"] = "Fibonacci"
