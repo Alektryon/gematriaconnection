@@ -471,7 +471,7 @@ class cipher {
 				}
 			}
 		}
-
+	if (this.cArr.indexOf(49) == -1) { // if cipher doesn't contain "1"
 		if (opt_NumCalculation == "Reduced") {
 			for (x = 0; x < impVal.length; x++) {
 				z = impVal.charCodeAt(x);
@@ -496,7 +496,8 @@ class cipher {
 				GemTotal += Number(curNum)
 			}
 		}
-
+	}
+		
 		if (GemTotal > 999999) {
 			return ">1 mil"
 		} else if (impType == 1) {
