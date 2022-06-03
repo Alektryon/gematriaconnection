@@ -1,4 +1,4 @@
-var ciphers_per_row = 4; ChartMax = 36
+var ciphers_per_row = 6; ChartMax = 36
 var cOption = "English"
 var breakCipher
 var pixelcount = 0; breakArr = []; pArr= []; mArr = []
