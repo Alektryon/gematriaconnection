@@ -329,6 +329,7 @@ body {
 .BreakChar2 {
 	text-align: center;
 	font-size: 114%;
+	font-family: Tahoma;
 	color: orange;
 	background: RGB(30,30,30);
 	padding-right: 2px;
