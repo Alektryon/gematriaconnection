@@ -20,7 +20,7 @@ body {
 
 .checkboxCipherFont {
 	/* font-weight: bold; */
-	/* font-family: Verdana, sans-serif */
+	/* font-family: Verdana, sans-serif; */
 }
 
 .cipherCategoryActive {
@@ -329,7 +329,7 @@ body {
 .BreakChar2 {
 	text-align: center;
 	font-size: 114%;
-	font-family: Tahoma;
+	font-family: Tahoma, sans-serif;
 	color: orange;
 	background: RGB(30,30,30);
 	padding-right: 2px;
