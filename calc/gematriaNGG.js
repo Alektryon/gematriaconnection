@@ -1365,7 +1365,7 @@ function Add_AllCiphers(impBool = false) {
 }
 function Add_BaseCiphers(impBool = false) {
 	var x, q, cN, z
-	var baseCiphers = ["English Ordinal", "Full Reduction", "Reverse Ordinal", "Reverse Full Reduction", "Alphanumeric Qabbala"]
+	var baseCiphers = ["English Ordinal", "Full Reduction", "English Extended", "Alphanumeric Qabbala"]
 
 	openCiphers = []
 	for (z = 0; z < allCiphers.length; z++) {
