@@ -199,7 +199,7 @@ class cipher {
 				this.vArr2 = [1, 5, 12, 22, 35, 51, 70, 92, 117, 145, 176, 210, 247, 287, 330, 376, 425, 477, 532, 590, 651, 715, 782, 852, 925, 1001]
 				break;
 				
-			case "Tesla":
+			case "Tesla369":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
 					this.cArr2[y] = (y + 65)
@@ -440,6 +440,7 @@ class cipher {
 		if (impMods.indexOf("TriangleNum") > -1) {this.Make_Trigonal()}
 		if (impMods.indexOf("SquareNum") > -1) {this.Make_Squares()}
 		if (impMods.indexOf("SumerianNum") > -1) {this.Make_Sumerian()}
+		if (impMods.indexOf("Tesla") > -1) {this.Make_Tesla()}
 		if (impMods.indexOf("KeyNum") > -1) {this.Make_KeyAlt()}
 		if (impMods.indexOf("BaconSimple") > -1) {this.Make_BaconSimple()}
 		if (impMods.indexOf("BaconReverse") > -1) {this.Make_BaconReverse()}
@@ -886,6 +887,22 @@ class cipher {
 			}
 		}
 	}
+	Make_Tesla() {
+		var x
+		for (x = 0; x < this.vArr.length; x++) {
+			this.vArr[x] = this.vArr[x] * 18
+		}
+		if (this.vArr2.length > 0) {
+			for (x = 0; x < this.vArr2.length; x++) {
+				this.vArr2[x] = this.vArr2[x] * 18
+			}
+		}
+		if (this.vArr3.length > 0) {
+			for (x = 0; x < this.vArr3.length; x++) {
+				this.vArr3[x] = this.vArr3[x] * 18
+			}
+		}
+	}
 	Make_Septenary() {
 		this.vArr = [1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 3, 2, 1, 1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 3, 2, 1]
 		if (this.vArr2.length > 0) {
@@ -1123,13 +1140,14 @@ function Build_Ciphers() {
 			case "Keypad": allCiphers[allCiphers.length] = new cipher(key, "Keypad", 255, 126, 255); break;
 			case "Isisian Codes": allCiphers[allCiphers.length] = new cipher(key, "Isisian Codes", 220,255,103); break;
 			case "Mirror": allCiphers[allCiphers.length] = new cipher(key, "Mirror", 210,220,240); break;
-			case "Satanic Qabbala": allCiphers[allCiphers.length] = new cipher(key, "SatanAQ", 223,98,64); break;
+			case "Satanic Qabbala": allCiphers[allCiphers.length] = new cipher(key, "SatanAQ", 223,98,0); break;
 
 			case "NonPrime Numbers": allCiphers[allCiphers.length] = new cipher(key, "NonPrime", 125, 66, 244,); break;
 			case "Reverse NonPrime Numbers": allCiphers[allCiphers.length] = new cipher(key, "NonPrime", 125, 100, 244,"Reverse"); break;
 			case "Pentagonal Numbers": allCiphers[allCiphers.length] = new cipher(key, "Pentagonal", 80, 150, 180,); break;
 			case "Reverse Pentagonal Numbers": allCiphers[allCiphers.length] = new cipher(key, "Pentagonal", 80, 160, 190,"Reverse"); break;
-			case "Tesla Numbers 369": allCiphers[allCiphers.length] = new cipher(key, "Tesla", 20, 120, 20,); break;
+			case "Tesla Numbers 369": allCiphers[allCiphers.length] = new cipher(key, "Tesla369", 20, 120, 20,); break;
+			case "Tesla": allCiphers[allCiphers.length] = new cipher(key, "English", 70, 170, 70, "Tesla"); break;
 						
 			//Keyboard//
 			case "Qwerty": allCiphers[allCiphers.length] = new cipher(key, "Qwerty", 255,192,203); break;
@@ -1250,6 +1268,7 @@ function Set_Categories() {
 	cipherArray["Reverse NonPrime Numbers"] = "Mathematical"
 	cipherArray["Pentagonal Numbers"] = "Mathematical"
 	cipherArray["Reverse Pentagonal Numbers"] = "Mathematical"
+	cipherArray["Tesla"] = "Mathematical"
 	cipherArray["Tesla Numbers 369"] = "Mathematical"
 
 	cipherArray["Foolʹs Key"] = "Cypher Keys"
@@ -1365,7 +1384,7 @@ function Add_AllCiphers(impBool = false) {
 }
 function Add_BaseCiphers(impBool = false) {
 	var x, q, cN, z
-	var baseCiphers = ["English Ordinal", "Full Reduction", "English Extended", "Alphanumeric Qabbala"]
+	var baseCiphers = ["English Ordinal", "Full Reduction", "Reverse Ordinal", "Reverse Full Reduction", "Alphanumeric Qabbala"]
 
 	openCiphers = []
 	for (z = 0; z < allCiphers.length; z++) {
