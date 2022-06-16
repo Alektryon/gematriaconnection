@@ -1189,7 +1189,7 @@ function Build_Ciphers() {
 }
 
 function Set_Categories() {
-	catArr = ["English", "Reverse", "Elizabethan", "Illuminati", "Latin-Italic", "Thelemic", "Ordinal Custom", "Mathematical", "Cypher Keys", "Fibonacci", "Other", "Keyboard", "Foreign", "Russian", "Custom"]
+	catArr = ["English", "Reverse", "Elizabethan", "Illuminati", "Latin-Italic", "Thelemic", "Ordinal Custom", "Cypher Keys", "Mathematical", "Fibonacci", "Other", "Keyboard", "Foreign", "Russian", "Custom"]
 
 	cipherArray["English Ordinal"] = "English"
 	cipherArray["Full Reduction"] = "English"
@@ -1256,6 +1256,10 @@ function Set_Categories() {
 	cipherArray["Masonic"] = "Ordinal Custom"
 	cipherArray["Foundation"] = "Ordinal Custom"
     
+	cipherArray["Foolʹs Key"] = "Cypher Keys"
+	cipherArray["Zeroing Key"] = "Cypher Keys"
+	cipherArray["Alphanumeric Halves"] = "Cypher Keys"
+
 	cipherArray["English Sumerian"] = "Mathematical"
 	cipherArray["Reverse English Sumerian"] = "Mathematical"
 	cipherArray["Primes"] = "Mathematical"
@@ -1270,10 +1274,6 @@ function Set_Categories() {
 	cipherArray["Reverse Pentagonal Numbers"] = "Mathematical"
 	cipherArray["Tesla"] = "Mathematical"
 	cipherArray["Tesla Numbers 369"] = "Mathematical"
-
-	cipherArray["Foolʹs Key"] = "Cypher Keys"
-	cipherArray["Zeroing Key"] = "Cypher Keys"
-	cipherArray["Alphanumeric Halves"] = "Cypher Keys"
 
 	cipherArray["Fibonacci"] = "Fibonacci"
 	cipherArray["Reverse Fibonacci"] = "Fibonacci"
