@@ -325,6 +325,14 @@ class cipher {
 				this.vArr = [9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34]
 				this.vArr2 = [9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34]
 				break;
+			case "Ordinal Starting at 10":
+				for (y = 0; y < 26; y++) {
+					this.cArr[y] = (y + 97)
+					this.cArr2[y] = (y + 65)
+				}
+				this.vArr = [10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35]
+				this.vArr2 = [10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35]
+				break;
 			case "AQ":
 				for (y = 0; y < 36; y++) {
 				this.cArr = [48,49,50,51,52,53,54,55,56,57,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122]
@@ -1101,6 +1109,7 @@ function Build_Ciphers() {
 			case "English Qaballa": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 64, 0, "ALW"); break;
 			case "Cipher X": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 88, 0, "KFW"); break;
 			case "Trigrammaton Qabalah": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 93, 73, "LCH"); break;
+			case "Alphanumeric Qabbala": allCiphers[allCiphers.length] = new cipher(key, "AQ", 191,195,127); break;   
 			case "Abrahadabra Cipher": allCiphers[allCiphers.length] = new cipher(key, "Abrahadabra", 222,172,0); break;   
 
 			case "Ordinal Starting at 2": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 2", 21, 187, 14); break;
@@ -1111,7 +1120,7 @@ function Build_Ciphers() {
 			case "Ordinal Starting at 7": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 7", 116, 162, 64); break;    
 			case "Ordinal Starting at 8": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 8", 135, 157, 74); break;   
 			case "Ordinal Starting at 9": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 9", 154, 152, 84); break;
-			case "Alphanumeric Qabbala": allCiphers[allCiphers.length] = new cipher(key, "AQ", 191,195,127); break;   
+			case "Ordinal Starting at 10": allCiphers[allCiphers.length] = new cipher(key, "Ordinal Starting at 10", 191, 195, 127); break;
 			case "Master": allCiphers[allCiphers.length] = new cipher(key, "Master", 102,139,235); break;   
 			case "Master Builder": allCiphers[allCiphers.length] = new cipher(key, "Master Builder", 0,202,191); break;   
 		 	case "Masonic": allCiphers[allCiphers.length] = new cipher(key, "Masonic", 255,179,87); break;   
@@ -1240,6 +1249,7 @@ function Set_Categories() {
 	cipherArray["English Qaballa"] = "Thelemic"
 	cipherArray["Cipher X"] = "Thelemic"
 	cipherArray["Trigrammaton Qabalah"] = "Thelemic"
+   	cipherArray["Alphanumeric Qabbala"] = "Thelemic"
    	cipherArray["Abrahadabra Cipher"] = "Thelemic"
 
 	cipherArray["Ordinal Starting at 2"] = "Ordinal Custom"
@@ -1250,7 +1260,7 @@ function Set_Categories() {
 	cipherArray["Ordinal Starting at 7"] = "Ordinal Custom"
 	cipherArray["Ordinal Starting at 8"] = "Ordinal Custom"
 	cipherArray["Ordinal Starting at 9"] = "Ordinal Custom"
-   	cipherArray["Alphanumeric Qabbala"] = "Ordinal Custom"
+	cipherArray["Ordinal Starting at 10"] = "Ordinal Custom"
   	cipherArray["Master"] = "Ordinal Custom"
 	cipherArray["Master Builder"] = "Ordinal Custom"
 	cipherArray["Masonic"] = "Ordinal Custom"
