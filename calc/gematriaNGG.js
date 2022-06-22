@@ -1179,7 +1179,7 @@ function Build_Ciphers() {
 			case "Greek Isopsephy": allCiphers[allCiphers.length] = new cipher(key, "Greek", 139, 200, 163, "Extend"); break;
 			case "Greek Ordinal 24": allCiphers[allCiphers.length] = new cipher(key, "Greek24", 200, 200, 40); break;
                 
-			case "Novem Maximus": allCiphers[allCiphers.length] = new cipher(key, "Novem Maximus", 166, 199, 66); break;
+			case "Novem Maximus": allCiphers[allCiphers.length] = new cipher(key, "Novem Maximus", 176, 221, 39); break;
 
 			case "RU Ordinal": allCiphers[allCiphers.length] = new cipher(key, "Russian", 0, 186, 0); break;
 			case "RU Full Reduction": allCiphers[allCiphers.length] = new cipher(key, "Russian", 88, 125, 254, "FullReduction"); break;
@@ -1272,13 +1272,13 @@ function Set_Categories() {
 
 	cipherArray["English Sumerian"] = "Mathematical"
 	cipherArray["Reverse English Sumerian"] = "Mathematical"
+	cipherArray["Novem Maximus"] = "Mathematical"
 	cipherArray["Primes"] = "Mathematical"
 	cipherArray["Trigonal"] = "Mathematical"
 	cipherArray["Squares"] = "Mathematical"
 	cipherArray["Reverse Primes"] = "Mathematical"
 	cipherArray["Reverse Trigonal"] = "Mathematical"
 	cipherArray["Reverse Squares"] = "Mathematical"
- 	cipherArray["Novem Maximus"] = "Mathematical"
 	cipherArray["NonPrime Numbers"] = "Mathematical"
 	cipherArray["Reverse NonPrime Numbers"] = "Mathematical"
 	cipherArray["Pentagonal Numbers"] = "Mathematical"
