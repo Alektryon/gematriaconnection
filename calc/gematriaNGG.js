@@ -1278,6 +1278,7 @@ function Set_Categories() {
 	cipherArray["Reverse Primes"] = "Mathematical"
 	cipherArray["Reverse Trigonal"] = "Mathematical"
 	cipherArray["Reverse Squares"] = "Mathematical"
+ 	cipherArray["Novem Maximus"] = "Mathematical"
 	cipherArray["NonPrime Numbers"] = "Mathematical"
 	cipherArray["Reverse NonPrime Numbers"] = "Mathematical"
 	cipherArray["Pentagonal Numbers"] = "Mathematical"
@@ -1295,7 +1296,6 @@ function Set_Categories() {
 	cipherArray["Keypad"] = "Other"
 	cipherArray["Isisian Codes"] = "Other"
 	cipherArray["Mirror"] = "Other"
- 	cipherArray["Novem Maximus"] = "Other"
  	cipherArray["Satanic Qabbala"] = "Other"
         
 	cipherArray["Qwerty"] = "Keyboard"
