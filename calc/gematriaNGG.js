@@ -683,8 +683,8 @@ class cipher {
 	}
 
 	Reverse_Order() {
-		this.vArr.reverse()
-		if (this.vArr2.length > 0) { this.vArr2.reverse() }
+		this.cArr.reverse()
+		this.cArr2.reverse()
 	}
 
 	Reduce_Full() {
