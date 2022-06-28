@@ -1002,7 +1002,7 @@ function Populate_Sums(impVal) {
 
 function Open_Properties(impNum) {
 	if (impNum > 0 && impNum < 10000000) {
-		window.open("https://www.numbersaplenty.com/" + impNum, "Properties of " + impNum, "height=480,width=750")
+		window.open("http://www.gematrinator.com/calculator/numberProperties.php?Number=" + impNum, "Properties of " + impNum, "height=480,width=750")
 	}
 }
 
