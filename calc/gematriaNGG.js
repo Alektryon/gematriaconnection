@@ -154,25 +154,7 @@ class cipher {
 				this.vArr = [2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 9, 9, 9, 9]
 				this.vArr2 = [2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 9, 9, 9, 9]
 				break;
-			case "Fibonacci":
-				for (y = 0; y < 26; y++) {
-					this.cArr[y] = (y + 97)
-					this.cArr2[y] = (y + 65)
-				}
-		      		this.vArr = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025,121393]
-				this.vArr2 = [ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025,121393]
-				break;
-				
-			case "Fibonacci Reduced":
-				for (y = 0; y < 26; y++) {
-					this.cArr[y] = (y + 97)
-					this.cArr2[y] = (y + 65)
-				}
-		 	       this.vArr = [1, 1, 2, 3, 5, 8, 4, 3, 7, 10, 8, 9, 1, 1, 2, 3, 5, 8, 4, 3, 7, 10, 8, 9, 1, 1]
-				this.vArr2 = [ 1, 1, 2, 3, 5, 8, 4, 3, 7, 10, 8, 9, 1, 1, 2, 3, 5, 8, 4, 3, 7, 10, 8, 9, 1, 1]
-				break;
-			
-			case "Barnis Cipher":
+			case "Fibonacci Cipher":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
 					this.cArr2[y] = (y + 65)
@@ -180,7 +162,14 @@ class cipher {
 				this.vArr = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 233, 144, 89, 55, 34, 21, 13,  8, 5, 3, 2, 1, 1]
 				this.vArr2 = [ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 233, 144, 89, 55, 34, 21, 13,  8, 5, 3, 2, 1, 1]
 				break;
-				
+			case "Fibonacci Sequence":
+				for (y = 0; y < 26; y++) {
+					this.cArr[y] = (y + 97)
+					this.cArr2[y] = (y + 65)
+				}
+		      		this.vArr = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025,121393]
+				this.vArr2 = [ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025,121393]
+				break;
 			case "NonPrime":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
@@ -1141,10 +1130,8 @@ function Build_Ciphers() {
 			case "Foolʹs Key": allCiphers[allCiphers.length] = new cipher(key, "FoolsKey", 46, 158, 214); break;
 			case "Zeroing Key": allCiphers[allCiphers.length] = new cipher(key, "ZeroingKey", 80, 183, 220); break;
 				
-			case "Fibonacci": allCiphers[allCiphers.length] = new cipher(key, "Fibonacci", 148,0,211); break;
-			case "Reverse Fibonacci": allCiphers[allCiphers.length] = new cipher(key, "Fibonacci", 190,0,200, "Reverse"); break;
-			case "Fibonacci Reduced": allCiphers[allCiphers.length] = new cipher(key, "Fibonacci Reduced", 188,0,211); break;
-			case "Barni Yamumʹs Fibonacci Cipher": allCiphers[allCiphers.length] = new cipher(key, "Barnis Cipher", 199,0,220,); break;
+			case "Fibonacci Cipher": allCiphers[allCiphers.length] = new cipher(key, "Fibonacci Cipher", 233, 202, 148); break;
+			case "Fibonacci Sequence": allCiphers[allCiphers.length] = new cipher(key, "Fibonacci Sequence", 233,144,89); break;
 				
 			case "Septenary": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 153, 77, "SeptenaryNum"); break;
 			case "Chaldean": allCiphers[allCiphers.length] = new cipher(key, "Chald", 166, 166, 99); break;
@@ -1289,10 +1276,8 @@ function Set_Categories() {
 	cipherArray["Tesla"] = "Mathematical"
 	cipherArray["Tesla Numbers 369"] = "Mathematical"
 
-	cipherArray["Fibonacci"] = "Fibonacci"
-	cipherArray["Reverse Fibonacci"] = "Fibonacci"
-	cipherArray["Fibonacci Reduced"] = "Fibonacci"
-	cipherArray["Barni Yamumʹs Fibonacci Cipher"] = "Fibonacci"
+	cipherArray["Fibonacci Cipher"] = "Fibonacci"
+	cipherArray["Fibonacci Sequence"] = "Fibonacci"
 	
 	cipherArray["Septenary"] = "Other"
 	cipherArray["Chaldean"] = "Other"
