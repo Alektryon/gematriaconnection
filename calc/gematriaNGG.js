@@ -352,7 +352,7 @@ class cipher {
 				this.vArr = [1,2,3,4,5,6,7,8,9,10,11,1,2,3,4,5,6,7,8,9,10,11,1,2,3,4]
 				this.vArr2 = [1,2,3,4,5,6,7,8,9,10,11,1,2,3,4,5,6,7,8,9,10,11,1,2,3,4]
 				break;
-            case "Master":
+			case "Master":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
 					this.cArr2[y] = (y + 65)
@@ -360,7 +360,7 @@ class cipher {
 				this.vArr = [11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36]
 				this.vArr2 = [11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36]
 				break;
-            case "Master Builder":
+			case "Master Builder":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
 					this.cArr2[y] = (y + 65)
@@ -368,7 +368,7 @@ class cipher {
 				this.vArr = [22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47]
 				this.vArr2 = [22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47]
 				break;
-            case "Masonic":
+			case "Masonic":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
 					this.cArr2[y] = (y + 65)
@@ -376,7 +376,7 @@ class cipher {
 				this.vArr = [33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58]
 				this.vArr2 = [33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58]
 				break;
-            case "Foundation":
+			case "Foundation":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
 					this.cArr2[y] = (y + 65)
@@ -384,13 +384,21 @@ class cipher {
 				this.vArr = [44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69]
 				this.vArr2 = [44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69]
 				break;
-            case "Novem Maximus":
+			case "Novem Maximus":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
 					this.cArr2[y] = (y + 65)
 				}
 				this.vArr = [9,18,27,36,45,54,63,72,81,90,99,108,117,126,135,144,153,162,171,180,189,198,207,216,225,234]
 				this.vArr2 = [9,18,27,36,45,54,63,72,81,90,99,108,117,126,135,144,153,162,171,180,189,198,207,216,225,234]
+				break;
+			case "Duodecim":
+				for (y = 0; y < 26; y++) {
+					this.cArr[y] = (y + 97)
+					this.cArr2[y] = (y + 65)
+				}
+				this.vArr = [12,24,36,48,60,72,84,96,108,120,132,144,156,168,180,192,204,216,228,240,252,264,276,288,300,312]
+				this.vArr2 = [12,24,36,48,60,72,84,96,108,120,132,144,156,168,180,192,204,216,228,240,252,264,276,288,300,312]
 				break;
 			case "FoolsKey":
 				for (y = 0; y < 26; y++) {
@@ -1119,7 +1127,11 @@ function Build_Ciphers() {
 			case "Foundation": allCiphers[allCiphers.length] = new cipher(key, "Foundation", 207,80,155); break;   
 
 			case "English Sumerian": allCiphers[allCiphers.length] = new cipher(key, "English", 169, 208, 142, "SumerianNum"); break;
-			case "Reverse English Sumerian": allCiphers[allCiphers.length] = new cipher(key, "English", 220, 208, 148, "Reverse", "SumerianNum"); break;
+			case "Reverse Sumerian": allCiphers[allCiphers.length] = new cipher(key, "English", 220, 208, 148, "Reverse", "SumerianNum"); break;
+			case "Novem Maximus": allCiphers[allCiphers.length] = new cipher(key, "Novem Maximus", 176, 221, 39); break;
+			case "Duodecim": allCiphers[allCiphers.length] = new cipher(key, "Duodecim", 252, 144, 156); break;
+			case "Tesla": allCiphers[allCiphers.length] = new cipher(key, "English", 70, 170, 70, "Tesla"); break;
+
 			case "Primes": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 204, 111, "PrimeNum"); break;
 			case "Trigonal": allCiphers[allCiphers.length] = new cipher(key, "English", 231, 180, 113, "TriangleNum"); break;
 			case "Squares": allCiphers[allCiphers.length] = new cipher(key, "English", 228, 216, 96, "SquareNum"); break;
@@ -1144,7 +1156,6 @@ function Build_Ciphers() {
 			case "Pentagonal Numbers": allCiphers[allCiphers.length] = new cipher(key, "Pentagonal", 80, 150, 180,); break;
 			case "Reverse Pentagonal Numbers": allCiphers[allCiphers.length] = new cipher(key, "Pentagonal", 80, 160, 190,"Reverse"); break;
 			case "Tesla Numbers 369": allCiphers[allCiphers.length] = new cipher(key, "Tesla369", 20, 120, 20,); break;
-			case "Tesla": allCiphers[allCiphers.length] = new cipher(key, "English", 70, 170, 70, "Tesla"); break;
 						
 			//Keyboard//
 			case "Qwerty": allCiphers[allCiphers.length] = new cipher(key, "Qwerty", 255,192,203); break;
@@ -1165,9 +1176,7 @@ function Build_Ciphers() {
 			case "Greek Reduction": allCiphers[allCiphers.length] = new cipher(key, "Greek", 156, 201, 171, "FullReduction"); break;
 			case "Greek Ordinal": allCiphers[allCiphers.length] = new cipher(key, "Greek", 149, 199, 139); break;
 			case "Greek Isopsephy": allCiphers[allCiphers.length] = new cipher(key, "Greek", 139, 200, 163, "Extend"); break;
-			case "Greek Ordinal 24": allCiphers[allCiphers.length] = new cipher(key, "Greek24", 200, 200, 40); break;
-                
-			case "Novem Maximus": allCiphers[allCiphers.length] = new cipher(key, "Novem Maximus", 176, 221, 39); break;
+			case "Greek Ordinal 24": allCiphers[allCiphers.length] = new cipher(key, "Greek24", 200, 200, 40); break;                
 
 			case "RU Ordinal": allCiphers[allCiphers.length] = new cipher(key, "Russian", 0, 186, 0); break;
 			case "RU Full Reduction": allCiphers[allCiphers.length] = new cipher(key, "Russian", 88, 125, 254, "FullReduction"); break;
@@ -1186,7 +1195,7 @@ function Build_Ciphers() {
 }
 
 function Set_Categories() {
-	catArr = ["English", "Reverse", "Elizabethan", "Illuminati", "Latin-Italic", "Thelemic", "Alphanumeric", "Ordinal Custom", "Cypher Keys", "Mathematical", "Fibonacci", "Other", "Keyboard", "Foreign", "Russian", "Custom"]
+	catArr = ["English", "Reverse", "Elizabethan", "Illuminati", "Latin-Italic", "Thelemic", "Alphanumeric", "Ordinal Custom", "Multiplication", "Cypher Keys", "Mathematical", "Fibonacci", "Other", "Keyboard", "Foreign", "Russian", "Custom"]
 
 	cipherArray["English Ordinal"] = "English"
 	cipherArray["Full Reduction"] = "English"
@@ -1257,12 +1266,15 @@ function Set_Categories() {
 	cipherArray["Masonic"] = "Ordinal Custom"
 	cipherArray["Foundation"] = "Ordinal Custom"
     
+	cipherArray["English Sumerian"] = "Multiplication"
+	cipherArray["Reverse Sumerian"] = "Multiplication"
+	cipherArray["Novem Maximus"] = "Multiplication"
+	cipherArray["Duodecim"] = "Multiplication"
+	cipherArray["Tesla"] = "Multiplication"
+
 	cipherArray["Foolʹs Key"] = "Cypher Keys"
 	cipherArray["Zeroing Key"] = "Cypher Keys"
 
-	cipherArray["English Sumerian"] = "Mathematical"
-	cipherArray["Reverse English Sumerian"] = "Mathematical"
-	cipherArray["Novem Maximus"] = "Mathematical"
 	cipherArray["Primes"] = "Mathematical"
 	cipherArray["Trigonal"] = "Mathematical"
 	cipherArray["Squares"] = "Mathematical"
@@ -1273,7 +1285,6 @@ function Set_Categories() {
 	cipherArray["Reverse NonPrime Numbers"] = "Mathematical"
 	cipherArray["Pentagonal Numbers"] = "Mathematical"
 	cipherArray["Reverse Pentagonal Numbers"] = "Mathematical"
-	cipherArray["Tesla"] = "Mathematical"
 	cipherArray["Tesla Numbers 369"] = "Mathematical"
 
 	cipherArray["Fibonacci Cipher"] = "Fibonacci"
