@@ -1139,13 +1139,13 @@ function Build_Ciphers() {
 			case "Primes": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 204, 111, "PrimeNum"); break;
 			case "Trigonal": allCiphers[allCiphers.length] = new cipher(key, "English", 231, 180, 113, "TriangleNum"); break;
 			case "Squares": allCiphers[allCiphers.length] = new cipher(key, "English", 228, 216, 96, "SquareNum"); break;
+			case "Pentagonal": allCiphers[allCiphers.length] = new cipher(key, "Pentagonal", 215, 200, 100,); break;
 			case "Reverse Primes": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 209, 145, "Reverse", "PrimeNum"); break;
 			case "Reverse Trigonal": allCiphers[allCiphers.length] = new cipher(key, "English", 238, 191, 112, "Reverse", "TriangleNum"); break;
 			case "Reverse Squares": allCiphers[allCiphers.length] = new cipher(key, "English", 240, 225, 112, "Reverse", "SquareNum"); break;
-			case "Pentagonal Numbers": allCiphers[allCiphers.length] = new cipher(key, "Pentagonal", 80, 150, 180,); break;
-			case "Reverse Pentagonal Numbers": allCiphers[allCiphers.length] = new cipher(key, "Pentagonal", 80, 160, 190,"Reverse"); break;
-			case "NonPrime Numbers": allCiphers[allCiphers.length] = new cipher(key, "NonPrime", 125, 66, 244,); break;
-			case "Reverse NonPrime Numbers": allCiphers[allCiphers.length] = new cipher(key, "NonPrime", 125, 100, 244,"Reverse"); break;
+			case "Reverse Pentagonal": allCiphers[allCiphers.length] = new cipher(key, "Pentagonal", 245, 200, 130,"Reverse"); break;
+			case "Non-Primes": allCiphers[allCiphers.length] = new cipher(key, "NonPrime", 125, 66, 244,); break;
+			case "Reverse Non-Primes": allCiphers[allCiphers.length] = new cipher(key, "NonPrime", 125, 100, 244,"Reverse"); break;
 			case "Tesla Numbers 369": allCiphers[allCiphers.length] = new cipher(key, "Tesla369", 20, 120, 20,); break;
 
 			case "Fibonacci Cipher": allCiphers[allCiphers.length] = new cipher(key, "Fibonacci Cipher", 233, 202, 148); break;
@@ -1280,13 +1280,13 @@ function Set_Categories() {
 	cipherArray["Primes"] = "Mathematical"
 	cipherArray["Trigonal"] = "Mathematical"
 	cipherArray["Squares"] = "Mathematical"
+	cipherArray["Pentagonal"] = "Mathematical"
 	cipherArray["Reverse Primes"] = "Mathematical"
 	cipherArray["Reverse Trigonal"] = "Mathematical"
 	cipherArray["Reverse Squares"] = "Mathematical"
-	cipherArray["Pentagonal Numbers"] = "Mathematical"
-	cipherArray["Reverse Pentagonal Numbers"] = "Mathematical"
-	cipherArray["NonPrime Numbers"] = "Mathematical"
-	cipherArray["Reverse NonPrime Numbers"] = "Mathematical"
+	cipherArray["Reverse Pentagonal"] = "Mathematical"
+	cipherArray["Non-Primes"] = "Mathematical"
+	cipherArray["Reverse Non-Primes"] = "Mathematical"
 	cipherArray["Tesla Numbers 369"] = "Mathematical"
 
 	cipherArray["Fibonacci Cipher"] = "Fibonacci"
