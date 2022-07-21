@@ -2,7 +2,6 @@
 
 ### Based on [Gematrinator.com](https://www.gematrinator.com/calculator/index.php) (original calculator by Derek Tikkuri)
 ---
-> NOTE: This version is no longer maintained, please use [Gematro](https://gematro.github.io/)!
 
 ### List of features:
 <ul>
