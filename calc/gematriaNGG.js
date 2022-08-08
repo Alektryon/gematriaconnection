@@ -154,6 +154,14 @@ class cipher {
 				this.vArr = [2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 9, 9, 9, 9]
 				this.vArr2 = [2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8, 8, 8, 9, 9, 9, 9]
 				break;
+			case "SMS":
+				for (y = 0; y < 26; y++) {
+					this.cArr[y] = (y + 97)
+					this.cArr2[y] = (y + 65)
+				}
+				this.vArr = [2,4,6,3,6,9,4,8,12,5,10,15,6,12,18,7,14,21,28,8,16,24,9,18,27,36]
+				this.vArr2 = [2,4,6,3,6,9,4,8,12,5,10,15,6,12,18,7,14,21,28,8,16,24,9,18,27,36]
+				break;
 			case "Fibonacci Cipher":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
@@ -1161,6 +1169,7 @@ function Build_Ciphers() {
 			case "Septenary": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 153, 77, "SeptenaryNum"); break;
 			case "Chaldean": allCiphers[allCiphers.length] = new cipher(key, "Chald", 166, 166, 99); break;
 			case "Keypad": allCiphers[allCiphers.length] = new cipher(key, "Keypad", 255, 126, 255); break;
+			case "SMS Gematria": allCiphers[allCiphers.length] = new cipher(key, "SMS", 232, 125, 161); break;
 			case "Isisian Codes": allCiphers[allCiphers.length] = new cipher(key, "Isisian Codes", 220,255,103); break;
 			case "Mirror": allCiphers[allCiphers.length] = new cipher(key, "Mirror", 210,220,240); break;
 
@@ -1303,6 +1312,7 @@ function Set_Categories() {
 	cipherArray["Septenary"] = "Other"
 	cipherArray["Chaldean"] = "Other"
 	cipherArray["Keypad"] = "Other"
+	cipherArray["SMS Gematria"] = "Other"
 	cipherArray["Isisian Codes"] = "Other"
 	cipherArray["Mirror"] = "Other"
         
