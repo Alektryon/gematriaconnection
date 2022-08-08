@@ -178,7 +178,6 @@ class cipher {
 				this.vArr = [1, 4, 6, 8, 9, 10, 12, 14, 15, 16, 18, 20, 21, 22, 24, 25, 26, 27, 28, 30, 32, 33, 34, 35, 36, 38]
 				this.vArr2 = [ 1, 4, 6, 8, 9, 10, 12, 14, 15, 16, 18, 20, 21, 22, 24, 25, 26, 27, 28, 30, 32, 33, 34, 35, 36, 38]
 				break;
-				
 			case "Pentagonal":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
@@ -187,7 +186,14 @@ class cipher {
 				this.vArr = [1, 5, 12, 22, 35, 51, 70, 92, 117, 145, 176, 210, 247, 287, 330, 376, 425, 477, 532, 590, 651, 715, 782, 852, 925, 1001]
 				this.vArr2 = [1, 5, 12, 22, 35, 51, 70, 92, 117, 145, 176, 210, 247, 287, 330, 376, 425, 477, 532, 590, 651, 715, 782, 852, 925, 1001]
 				break;
-				
+			case "Palindromes":
+				for (y = 0; y < 26; y++) {
+					this.cArr[y] = (y + 97)
+					this.cArr2[y] = (y + 65)
+				}
+				this.vArr = [1,2,3,4,5,6,7,8,9,11,22,33,44,55,66,77,88,99,101,111,121,131,141,151,161,171]
+				this.vArr2 = [1,2,3,4,5,6,7,8,9,11,22,33,44,55,66,77,88,99,101,111,121,131,141,151,161,171]
+				break;
 			case "Tesla369":
 				for (y = 0; y < 26; y++) {
 					this.cArr[y] = (y + 97)
@@ -1139,14 +1145,15 @@ function Build_Ciphers() {
 			case "Primes": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 204, 111, "PrimeNum"); break;
 			case "Trigonal": allCiphers[allCiphers.length] = new cipher(key, "English", 231, 180, 113, "TriangleNum"); break;
 			case "Squares": allCiphers[allCiphers.length] = new cipher(key, "English", 228, 216, 96, "SquareNum"); break;
-			case "Pentagonal": allCiphers[allCiphers.length] = new cipher(key, "Pentagonal", 215, 200, 100,); break;
+			case "Pentagonal": allCiphers[allCiphers.length] = new cipher(key, "Pentagonal", 215, 200, 100); break;
 			case "Reverse Primes": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 209, 145, "Reverse", "PrimeNum"); break;
 			case "Reverse Trigonal": allCiphers[allCiphers.length] = new cipher(key, "English", 238, 191, 112, "Reverse", "TriangleNum"); break;
 			case "Reverse Squares": allCiphers[allCiphers.length] = new cipher(key, "English", 240, 225, 112, "Reverse", "SquareNum"); break;
 			case "Reverse Pentagonal": allCiphers[allCiphers.length] = new cipher(key, "Pentagonal", 245, 200, 130,"Reverse"); break;
-			case "Non-Primes": allCiphers[allCiphers.length] = new cipher(key, "NonPrime", 125, 66, 244,); break;
+			case "Non-Primes": allCiphers[allCiphers.length] = new cipher(key, "NonPrime", 125, 66, 244); break;
 			case "Reverse Non-Primes": allCiphers[allCiphers.length] = new cipher(key, "NonPrime", 125, 100, 244,"Reverse"); break;
-			case "Tesla Numbers 369": allCiphers[allCiphers.length] = new cipher(key, "Tesla369", 20, 120, 20,); break;
+			case "Tesla Numbers 369": allCiphers[allCiphers.length] = new cipher(key, "Tesla369", 29, 171, 29); break;
+			case "Palindromes": allCiphers[allCiphers.length] = new cipher(key, "Palindromes", 29, 192, 237); break;
 
 			case "Fibonacci Cipher": allCiphers[allCiphers.length] = new cipher(key, "Fibonacci Cipher", 233, 202, 148); break;
 			case "Fibonacci Sequence": allCiphers[allCiphers.length] = new cipher(key, "Fibonacci Sequence", 233,144,89); break;
@@ -1288,6 +1295,7 @@ function Set_Categories() {
 	cipherArray["Non-Primes"] = "Mathematical"
 	cipherArray["Reverse Non-Primes"] = "Mathematical"
 	cipherArray["Tesla Numbers 369"] = "Mathematical"
+	cipherArray["Palindromes"] = "Mathematical"
 
 	cipherArray["Fibonacci Cipher"] = "Fibonacci"
 	cipherArray["Fibonacci Sequence"] = "Fibonacci"
