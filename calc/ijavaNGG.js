@@ -35,7 +35,8 @@ function Populate_MenuBar() {
 	hStr += '<div class="MenuLink"><a href="javascript:Open_Options()">Options</a></div>  |  '
 	hStr += '<div class="MenuLink"><a href="https://github.com/Alektryon/gematriaconnection">GitHub (changelog)</a></div>  |  '
 	hStr += '<div class="MenuLink"><a href="https://gematriaresearch.blogspot.com?m=0">Gematria Research</a></div>'
-
+	hStr += '<BR>'
+	hStr += '<div class="MenuLink">(Code based on <a href="http://www.gematrinator.com/calculator/index.php">Gematrinator.com</a>)</div>'
 	hStr += '<BR></center>'
 	mSpot.innerHTML = hStr
 }
