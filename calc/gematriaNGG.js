@@ -1013,7 +1013,7 @@ function Populate_Sums(impVal) {
 
 function Open_Properties(impNum) {
 	if (impNum > 0 && impNum < 10000000) {
-		window.open("http://www.gematrinator.com/calculator/numberProperties.php?Number=" + impNum, "Properties of " + impNum, "height=480,width=750")
+		window.open("https://gematrinator.com/number-properties?number=" + impNum, "Properties of " + impNum, "height=666,width=555")
 	}
 }
 
