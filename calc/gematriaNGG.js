@@ -40,6 +40,14 @@ class cipher {
 				}
 				Build_GemVals(this)
 				break;
+			case "ExtendAlt":
+				for (y = 0; y < 26; y++) {
+					this.cArr[y] = (y + 97)
+					this.cArr2[y] = (y + 65)
+				}
+				this.vArr = [1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170]
+				this.vArr2 = [1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100,110,120,130,140,150,160,170]
+				break;
 			case "Agrippa":
 				this.cArr = [97, 98, 99, 100, 101, 102, 103, 104, 105, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 120, 121, 122, 106, 118, 10680, 119]
 				this.cArr2 = [65, 66, 67, 68, 69, 70, 71, 72, 73, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 88, 89, 90, 74, 86, 10680, 87]
@@ -1077,6 +1085,7 @@ function Build_Ciphers() {
 			case "Single Reduction KV": allCiphers[allCiphers.length] = new cipher(key, "English", 70, 175, 244, "SingleReduction", "Exception"); break;
 			case "English Ordinal": allCiphers[allCiphers.length] = new cipher(key, "English", 0, 186, 0); break;
 			case "English Extended": allCiphers[allCiphers.length] = new cipher(key, "English", 218, 226, 0, "Extend"); break;
+			case "Extended Alternative": allCiphers[allCiphers.length] = new cipher(key, "ExtendAlt", 233, 182, 53); break;
 			case "Satanic Gematria": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 0, 0, "SatanicNum"); break;
 
 			case "Reverse Full Reduction": allCiphers[allCiphers.length] = new cipher(key, "English", 100, 226, 226, "Reverse", "FullReduction"); break;
@@ -1085,6 +1094,7 @@ function Build_Ciphers() {
 			case "Reverse Single Reduction EP": allCiphers[allCiphers.length] = new cipher(key, "English", 110, 226, 156, "Reverse", "SingleReduction", "Exception"); break;
 			case "Reverse Ordinal": allCiphers[allCiphers.length] = new cipher(key, "English", 80, 235, 21, "Reverse"); break;
 			case "Reverse Extended": allCiphers[allCiphers.length] = new cipher(key, "English", 253, 255, 119, "Reverse", "Extend"); break;
+			case "R Extended Alternative": allCiphers[allCiphers.length] = new cipher(key, "ExtendAlt", 238, 200, 104, "Reverse"); break;
 			case "Reverse Satanic": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 51, 51, "Reverse", "SatanicNum"); break;
 
 			case "Elizabethan Simple": allCiphers[allCiphers.length] = new cipher(key, "English", 80, 235, 21, "BaconSimple"); break;
@@ -1220,6 +1230,7 @@ function Set_Categories() {
 	cipherArray["Full Reduction KV"] = "English"
 	cipherArray["Single Reduction KV"] = "English"
 	cipherArray["English Extended"] = "English"
+	cipherArray["Extended Alternative"] = "English"
 	cipherArray["Satanic Gematria"] = "English"
 
 	cipherArray["Reverse Ordinal"] = "Reverse"
@@ -1228,6 +1239,7 @@ function Set_Categories() {
 	cipherArray["Reverse Full Reduction EP"] = "Reverse"
 	cipherArray["Reverse Single Reduction EP"] = "Reverse"
 	cipherArray["Reverse Extended"] = "Reverse"
+	cipherArray["R Extended Alternative"] = "Reverse"
 	cipherArray["Reverse Satanic"] = "Reverse"
 
 	cipherArray["Elizabethan Simple"] = "Elizabethan"
