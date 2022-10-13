@@ -133,12 +133,12 @@ class cipher {
 				this.cArr2 = [1040,1041,1042,1043,1044,1045,1025,1046,1047,1048,1049,1050,1051,1052,1053,1054,1055,1056,1057,1058,1059,1060,1061,1062,1063,1064,1065,1066,1067,1068,1069,1070,1071] // caps
 				Build_GemVals(this)
 				break;
-			case "OCSlavonic":
+			case "CyrillicNum":
 				this.cArr = [1072,1074,1075,1076,1077,1109,1079,1080,1139,1110,1082,1083,1084,1085,1135,1086,1087,1095,1088,1089,1090,1145,1092,1093,1137,1121,1094]
 				this.cArr2 = [1040,1042,1043,1044,1045,1029,1047,1048,1138,1030,1050,1051,1052,1053,1134,1054,1055,1063,1056,1057,1058,1144,1060,1061,1136,1120,1062] // caps
 				Build_GemVals(this)
 				break;
-			case "Glagolitic":
+			case "GlagoliticNum":
 				for (y = 0; y < 42; y++) {
 				this.cArr = [1072,1073,1074,1075,1169,1076,1077,1108,1101,1078,1109,1079,1110,1080,1115,1106,1082,1083,1113,1084,1085,1114,1086,1087,1088,1089,1090,1091,1092,1093,1121,1097,1094,1095,1119,1096,1098,1099,1100,1123,1103,1102]
 				this.cArr2 = [1040,1041,1042,1043,1168,1044,1045,1028,1069,1046,1029,1047,1030,1048,1035,1026,1050,1051,1033,1052,1053,1034,1054,1055,1056,1057,1058,1059,1060,1061,1120,1065,1062,1063,1039,1064,1066,1067,1068,1122,1071,1070]
@@ -1079,20 +1079,20 @@ function Build_Ciphers() {
 
 	for (key in cipherArray) {
 		switch (key) {
+			case "English Ordinal": allCiphers[allCiphers.length] = new cipher(key, "English", 0, 186, 0); break;
 			case "Full Reduction": allCiphers[allCiphers.length] = new cipher(key, "English", 88, 125, 254, "FullReduction"); break;
 			case "Single Reduction": allCiphers[allCiphers.length] = new cipher(key, "English", 140, 171, 227, "SingleReduction"); break;
 			case "Full Reduction KV": allCiphers[allCiphers.length] = new cipher(key, "English", 97, 195, 244, "FullReduction", "Exception"); break;
 			case "Single Reduction KV": allCiphers[allCiphers.length] = new cipher(key, "English", 70, 175, 244, "SingleReduction", "Exception"); break;
-			case "English Ordinal": allCiphers[allCiphers.length] = new cipher(key, "English", 0, 186, 0); break;
 			case "English Extended": allCiphers[allCiphers.length] = new cipher(key, "English", 218, 226, 0, "Extend"); break;
 			case "Extended Alternative": allCiphers[allCiphers.length] = new cipher(key, "ExtendAlt", 233, 182, 53); break;
 			case "Satanic Gematria": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 0, 0, "SatanicNum"); break;
 
+			case "Reverse Ordinal": allCiphers[allCiphers.length] = new cipher(key, "English", 80, 235, 21, "Reverse"); break;
 			case "Reverse Full Reduction": allCiphers[allCiphers.length] = new cipher(key, "English", 100, 226, 226, "Reverse", "FullReduction"); break;
 			case "Reverse Single Reduction": allCiphers[allCiphers.length] = new cipher(key, "English", 100, 216, 209, "Reverse", "SingleReduction"); break;
 			case "Reverse Full Reduction EP": allCiphers[allCiphers.length] = new cipher(key, "English", 101, 224, 194, "Reverse", "FullReduction", "Exception"); break;
 			case "Reverse Single Reduction EP": allCiphers[allCiphers.length] = new cipher(key, "English", 110, 226, 156, "Reverse", "SingleReduction", "Exception"); break;
-			case "Reverse Ordinal": allCiphers[allCiphers.length] = new cipher(key, "English", 80, 235, 21, "Reverse"); break;
 			case "Reverse Extended": allCiphers[allCiphers.length] = new cipher(key, "English", 253, 255, 119, "Reverse", "Extend"); break;
 			case "R Extended Alternative": allCiphers[allCiphers.length] = new cipher(key, "ExtendAlt", 238, 200, 104, "Reverse"); break;
 			case "Reverse Satanic": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 51, 51, "Reverse", "SatanicNum"); break;
@@ -1211,8 +1211,8 @@ function Build_Ciphers() {
 			case "RU Reverse Full Reduction": allCiphers[allCiphers.length] = new cipher(key, "Russian", 100, 226, 226, "Reverse", "FullReduction"); break;
 			case "RU Extended": allCiphers[allCiphers.length] = new cipher(key, "Russian", 218, 226, 0, "Extend"); break;
 			case "RU Reverse Extended": allCiphers[allCiphers.length] = new cipher(key, "Russian", 253, 255, 119, "Reverse", "Extend"); break;
-			case "Old Church Slavonic": allCiphers[allCiphers.length] = new cipher(key, "OCSlavonic", 194, 145, 222, "Extend"); break;
-			case "Glagolitic": allCiphers[allCiphers.length] = new cipher(key, "Glagolitic", 222, 145, 194); break;
+			case "Cyrillic Numerals": allCiphers[allCiphers.length] = new cipher(key, "CyrillicNum", 194, 145, 222, "Extend"); break;
+			case "Glagolitic Numerals": allCiphers[allCiphers.length] = new cipher(key, "GlagoliticNum", 222, 145, 194); break;
 				
 			case "English Custom": allCiphers[allCiphers.length] = new cipher(key, "English", 236, 236, 177, "EnglishCustom"); break;
 		}
@@ -1355,8 +1355,8 @@ function Set_Categories() {
 	cipherArray["RU Reverse Full Reduction"] = "Russian"
 	cipherArray["RU Extended"] = "Russian"
 	cipherArray["RU Reverse Extended"] = "Russian"
-	cipherArray["Old Church Slavonic"] = "Russian"
-	cipherArray["Glagolitic"] = "Russian"
+	cipherArray["Cyrillic Numerals"] = "Russian"
+	cipherArray["Glagolitic Numerals"] = "Russian"
 
 	cipherArray["English Custom"] = "Custom"
 	
