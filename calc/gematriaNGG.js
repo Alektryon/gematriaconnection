@@ -1123,7 +1123,7 @@ function Build_Ciphers() {
 			case "Trigrammaton Qabalah": allCiphers[allCiphers.length] = new cipher(key, "English", 255, 93, 73, "LCH"); break;
 			case "Abrahadabra Cipher": allCiphers[allCiphers.length] = new cipher(key, "Abrahadabra", 222,172,0); break;   
 
-			case "Alphanumeric Qabbala": allCiphers[allCiphers.length] = new cipher(key, "AQ", 191,195,127); break;   
+			case "Alphanumeric Qabbala": allCiphers[allCiphers.length] = new cipher(key, "AQ", 190, 190, 126); break;   
 			case "Elizabethan Alphanumeric": allCiphers[allCiphers.length] = new cipher(key, "ElizAQ", 227, 176, 114); break;
 			case "Satanic Qabbala": allCiphers[allCiphers.length] = new cipher(key, "SatanAQ", 223,126,92); break;
 			case "Alphanumeric Halves": allCiphers[allCiphers.length] = new cipher(key, "0Z", 126, 207, 241); break;
