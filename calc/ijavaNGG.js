@@ -320,7 +320,7 @@ function Populate_Breakdown(impName = breakCipher, impBool = false) {
 
 		if (opt_Breakdown == "Chart") {
 
-			rStr += '<table class="BreakTable"><tbody class="printBreakTable"><tr>'
+			rStr += '<table class="BreakTable" align="center"><tbody class="printBreakTable"><tr>'
 			for (x = 0; x < aCipher.cp.length; x++) {
 
 				if (aCipher.cp[x] !== " ") {
@@ -339,7 +339,7 @@ function Populate_Breakdown(impName = breakCipher, impBool = false) {
 								rStr += '<td class="BreakVal">' + aCipher.cv[z] + '</td>'
 							}
 						}
-						rStr += '</tr></tbody></table><br><table class="BreakTable"><tbody class="printBreakTable"><tr>'
+						rStr += '</tr></tbody></table><br><table class="BreakTable" align="center"><tbody class="printBreakTable"><tr>'
 					}
 					wCount++
 				}
@@ -375,7 +375,7 @@ function Populate_Breakdown(impName = breakCipher, impBool = false) {
 			var tdCount
 			tdCount = 0
 
-			rStr += '<table class="BreakTable"><tbody class="printBreakTable"><tr>'
+			rStr += '<table class="BreakTable" align="center"><tbody class="printBreakTable"><tr>'
 			for (x = 0; x < aCipher.cp.length; x++) {
 
 				if (aCipher.cp[x] !== " ") {
