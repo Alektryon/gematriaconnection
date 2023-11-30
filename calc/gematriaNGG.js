@@ -1340,8 +1340,8 @@ function Set_Categories() {
 	cipherArray["English Qaballa"] = "Thelemic"
 	cipherArray["Cipher X"] = "Thelemic"
 	cipherArray["Trigrammaton Qabalah"] = "Thelemic"
-	cipherArray["Elevenfold Qabalah"] = "Thelemic"
 	cipherArray["Toavotea Key"] = "Thelemic"
+	cipherArray["Elevenfold Qabalah"] = "Thelemic"
 	cipherArray["Prime Qabalah"] = "Thelemic"
 	cipherArray["William G. Gray"] = "Thelemic"
 
